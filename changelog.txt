@@ -1,0 +1,84 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 2024-12-21
+  Balancing:
+    - Added weight to all storage tanks, generally making them lighter as a result.
+    - 5x5 tank: Reduced item stack size.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 2024-12-05
+  Changes:
+    - Compatibility for Space Age DLC: Storage tanks now require heating on Aquilo, just like their
+      vanilla counterpart. Amount required is roughly proportional to their surface area.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2024-12-01
+  Balancing:
+    - Adjusted cost of all storage tanks, greatly lowering it for the larger ones. Had badly
+      miscalculated before!
+    - Adjusted health for all storage tanks.
+  Graphics:
+    - Adjusted window fluid flow rate for all storage tanks, should be more accurate.
+    - Changed explosion animation type and scaled amount and speed of debris from dying explosion
+      for all storage tanks according to their size.
+    - Item icons: Filled out windows so they are no longer see-through.
+  Sounds:
+    - Replaced generic inventory item pick/drop/move and entity gui open/close sounds with those
+      added in Factorio 2.0 for all storage tanks, according to their size.
+    - Reduced working sound a bit for the smaller storage tanks.
+    - Changed impact sounds of all storage tanks according to their size.
+    - Changed explosion sound type of all storage tanks according to their size.
+  Bugfixes:
+    - Replaced vehicle_impact_category with impact_category.
+  Info:
+    - Added a bit more info to settings.
+    - Fixed changelog.
+  Internal:
+    - Greatly compacted code for creation of remnants by using a function.
+    - Tidied up.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2024-11-18
+  Changes:
+    - Initial release. Copied the mod "Zithorian's Extra Storage Tanks" and renamed it.
+    - Ported mod to Factorio 2.0:
+      - Removed migrations with tech reset script, not needed; requires base >= 2.0.7 instead.
+      - Updated entity fluid_box to use "volume" instead of "base_area".
+      - Updated wire connections to use function "create_vector" instead of "create".
+      - Updated recipes to use the full recipe format.
+      - Fixed references to base game assets (game only uses high-res graphics now).
+  Info:
+    - Added license type to info.json (MIT), and added a text-version to the mod folder, applying
+      both Zithorian's and my own username to it.
+    - Updated mod description.
+    - Compacted entity descriptions by removing info that is not essential.
+  Settings:
+    - Removed capacity scaling factor from Startup Settings; seems unnecessary when each tank can
+      be individually configured.
+    - Set minimum value for capacity to 100.
+  Balancing:
+    - Adjusted all storage tank capacities to roughly fit visuals (an increase in all cases).
+    - Adjusted all recipes to roughly fit physical dimensions. Also, the larger the tank, the
+      relatively more steel compared to iron it will need!
+    - Increased stack size for the smaller tanks.
+  Graphics:
+    - Fixed out-of-bounds tooltip images with drawing_box_vertical_extension (new property).
+      Note: The same cannot be done for ghosts, at least not currently.
+    - Adjusted alt-option content icon for all tanks with icon_draw_specification (new property).
+    - Adjusted visual fluid flow rate to be roughly similar for all storage tank windows.
+    - 1x1, 5x5 tank: Fixed a mismatch of fluid and fluid flow visuals, which was also causing
+      frequent animation "jumps".
+    - 1x1 tank: Slighly darkened dirt pattern of window, also added thin, dark edges.
+    - 3x4 tank: Modified dirt pattern of window to look a bit less stretched out, added slighly
+      dark edges, thickened bottom edge, but lightened the darkest area a bit. Created extended
+      fluid flow graphics for the tank, to avoid unreasonable size scaling.
+    - 5x5 tank: Modified dirt pattern of window to have no "cross-section" (matching the rest),
+      added slighly dark edges, but lightened color of bottom edge.
+    - Created properly scaled and positioned remnants for each storage tank.
+    - Note: Not touching shadows around pipe connections, at least not for now; way too tedious
+      to try and correct, and there are many of them.
+    - Updated thumbnail, giving the letter a slighly darker and more vibrant hue of color. It's
+      different! Notice how it matches my username as well? No-no, that's not important... nvm.
+  Internal:
+    - Added nil-check for Fluid Handling technology before adding recipe unlocks.
+    - Tidied up.
