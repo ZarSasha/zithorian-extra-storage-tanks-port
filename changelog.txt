@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+Date: 2025-04-06
+  Changes:
+    - Removed "not-rotatable" flag from 1x1 and 5x5 storage tanks, allowing them to play nicely
+      with copy and blueprint functions.
+    - Tidied up some descriptions.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.3
 Date: 2024-12-21
   Balancing:

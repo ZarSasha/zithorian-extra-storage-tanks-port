@@ -113,7 +113,7 @@ local Entity = {
   name = entityName,
   icon = iconPath,
   icon_size = 64, icon_mipmaps = 4,
-  flags = {"placeable-player", "player-creation", "not-rotatable"},
+  flags = {"placeable-player", "player-creation"},
   minable = {mining_time = miningTime, result = entityName},
   max_health = maxHealth,
   corpse = entityName .. "-remnants",
