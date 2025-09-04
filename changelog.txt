@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.5
+Date: 2025-09-04
+  Translation:
+    - Added Chinese and Russian translations, contributed by community.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.4
 Date: 2025-04-06
   Changes:
@@ -88,4 +93,5 @@ Date: 2024-11-18
       different! Notice how it matches my username as well? No-no, that's not important... nvm.
   Internal:
     - Added nil-check for Fluid Handling technology before adding recipe unlocks.
+
     - Tidied up.
