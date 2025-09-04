@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.6
+Date: 2025-09-04
+  Translation:
+    - Fixed Chinese translation. Sigh...
+---------------------------------------------------------------------------------------------------
 Version: 1.0.5
 Date: 2025-09-04
   Translation:
@@ -95,3 +100,4 @@ Date: 2024-11-18
     - Added nil-check for Fluid Handling technology before adding recipe unlocks.
 
     - Tidied up.
+
