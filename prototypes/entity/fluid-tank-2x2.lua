@@ -14,6 +14,7 @@ local typeName   = "storage-tank"
 local entityName = "fluid-tank-2x2"
 local iconPath   = modName .. "/graphics/icons/" .. entityName .. ".png"
 
+
 local centerX = 1
 local centerY = 1
 
