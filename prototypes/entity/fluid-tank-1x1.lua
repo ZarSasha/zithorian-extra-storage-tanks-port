@@ -12,7 +12,7 @@ local explosion_animations = require "__base__.prototypes.entity.explosion-anima
 ---------------------------------------------------------------------------------------------------
 local typeName   = "storage-tank"
 local entityName = "fluid-tank-1x1"
-local iconPath   = modName .. "/graphics/icons/" .. entityName .. "-mipmap.png"
+local iconPath   = modName .. "/graphics/icons/" .. entityName .. ".png"
 
 local centerX = 0.5
 local centerY = 0.5

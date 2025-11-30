@@ -11,7 +11,8 @@ local sounds = require("__base__.prototypes.entity.sounds")
 ---------------------------------------------------------------------------------------------------
 local typeName   = "storage-tank"
 local entityName = "fluid-tank-3x4"
-local iconPath   = modName .. "/graphics/icons/" .. entityName .. "-mipmap.png"
+local iconPath   = modName .. "/graphics/icons/" .. entityName .. ".png"
+
 
 local centerX = 1.5
 local centerY = 2
