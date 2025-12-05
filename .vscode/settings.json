@@ -1,0 +1,20 @@
+{
+    "Lua.diagnostics.globals": [
+        "make_rotated_animation_variations_from_sheet",
+        "data",
+        "universal_connector_template",
+        "circuit_connector_definitions",
+        "defines",
+        "default_circuit_wire_max_distance",
+        "pipecoverspictures",
+        "util",
+        "settings",
+        "kg",
+        "mods",
+        "sounds",
+        "hit_effects",
+        "script",
+        "prototypes",
+        "storage"
+    ]
+}
