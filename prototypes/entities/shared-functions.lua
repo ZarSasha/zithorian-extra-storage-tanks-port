@@ -302,8 +302,8 @@ shared_functions.create_explosion = function(EntityName, Info)
     local DebrisSpeedX  = Info.DebrisSpeedX     -- number
 
     local sound_sizes   = {
-        ["small"]  = sounds.small_explosion(SoundVolMin, SoundVolMax),
-        ["medium"] = sounds.medium_explosion(SoundVolMin, SoundVolMax),
+        ["small"]  = sounds.small_explosion,
+        ["medium"] = sounds.medium_explosion,
         ["large"]  = sounds.large_explosion(SoundVolMin, SoundVolMax)
     }
     local anim_sizes  = {
