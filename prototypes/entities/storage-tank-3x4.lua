@@ -16,9 +16,9 @@ local entity_data = {
     MiningTime          = 0.75,
     Health              = 700,
     --FastReplaceGroup  = nil,
-    SelectionBox        = {{-1.5,-2.5},{ 1.5, 1.5}}, -- rotation axis 0.5 below visual center.
+    SelectionBox        = {{-1.5,-2.5},{ 1.5, 1.5}}, -- height in north/south orientation: 4 tiles
     CollisionOffset     = -0.1,
-    TileHeight          = 3,
+    TileHeight          = 3, -- pretends that height is only 3 tiles, for correct grid placement
     DrawBoxVertExt      = 2.15,
     IconDrawSpec        = {scale = 1.5, shift = {0, -0.75}},
     PipeConnections     = {

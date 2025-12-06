@@ -18,6 +18,7 @@ local entity_data = {
     --FastReplaceGroup  = nil,
     SelectionBox        = {{-1,-1},{ 1, 1}},
     CollisionOffset     = -0.1,
+    --TileHeight        = nil
     DrawBoxVertExt      = 0.15,
     IconDrawSpec        = {scale = 1, shift = {0,-0.25}},
     PipeConnections     = {
