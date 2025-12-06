@@ -18,9 +18,6 @@ for variant, volume in pairs({
     table.insert(startup_settings, {
         type = "double-setting",
         name = "zith-startup-storage-tank-"..variant.."-volume",
-        localised_name = {
-            variant, " ", "entity-name.storage-tank", "mod-setting-name.zith-volume"
-        },
         setting_type = "startup",
         default_value = volume,
         minimum_value = 100
