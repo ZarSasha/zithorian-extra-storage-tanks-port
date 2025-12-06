@@ -52,7 +52,7 @@ local entity_data = {
     FluidFlowScale      = 1.2,
     SoundSizeCategory   = "large",
     SoundVolume         = 0.6,
-    HeatingEnergy       = "175kW" -- On Aquilo
+    HeatingEnergy       = "180kW" -- On Aquilo
 }
 
 ---------------------------------------------------------------------------------------------------
@@ -78,7 +78,7 @@ local item_data = {
     Weight          =  50
 }
 local recipe_data = {
-    EnergyNeed      = 7.5,
+    EnergyNeed      = 5.0,
     IronPlates      =  24,
     SteelPlates     =  12
 }

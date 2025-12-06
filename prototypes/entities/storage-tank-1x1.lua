@@ -78,7 +78,7 @@ local item_data = {
     Weight          =  10
 }
 local recipe_data = {
-    EnergyNeed      = 1.5,
+    EnergyNeed      = 1.0,
     IronPlates      =   5,
     SteelPlates     =   1
 }
