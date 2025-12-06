@@ -9,7 +9,7 @@ Date: 2025-12-07
       references it. This may affect other mods (such as "Color Coded Pipes").
     - Moved code for unlocking technology from second to first prototype stage.
   Balancing:
-    - Generally lowered time to produce the storage tanks.
+    - Generally lowered the time it takes to craft the storage tanks.
   Scripting:
     - Compatibility: The 'no-rotation' script for the 3x4 storage tank now also applies to any
       clones (with similar names, of course), like those from the mod "Color Coded Pipes".
