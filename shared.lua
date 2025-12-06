@@ -9,7 +9,7 @@
 
 MOD_NAME      = "__zithorian-extra-storage-tanks-port__"
 ICON_PATH     = MOD_NAME .. "/graphics/icons/"
-GRAPHICS_PATH = MOD_NAME .. "/graphics/entities" -- fix singular
+GRAPHICS_PATH = MOD_NAME .. "/graphics/entities"
 
 STORAGE_TANK_NAME = {
     ["1x1"] = "zith-storage-tank-1x1",
@@ -23,9 +23,6 @@ SPACE_AGE = { IsPresent = mods["space-age"] }
 ---------------------------------------------------------------------------------------------------
 -- END NOTES
 ---------------------------------------------------------------------------------------------------
-
--- Add migrations for entities and settings! Fix locales!
-
 
 
 
