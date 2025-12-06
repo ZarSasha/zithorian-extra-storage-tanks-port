@@ -16,7 +16,7 @@ local entity_data = {
     MiningTime          = 0.75,
     Health              = 700,
     --FastReplaceGroup  = nil,
-    SelectionBox        = {{-1.5,-2.5},{ 1.5, 1.5}}, -- center displaced 0.5 downwards. I think?
+    SelectionBox        = {{-1.5,-2.5},{ 1.5, 1.5}}, -- rotation axis 0.5 below visual center.
     CollisionOffset     = -0.1,
     DrawBoxVertExt      = 2.15,
     IconDrawSpec        = {scale = 1.5, shift = {0, -0.75}},
@@ -35,14 +35,14 @@ local entity_data = {
         { 0,  28.5, 48.5, 0}, { 6,-64.5, 13.5,  0}
     ),
     EntitySprites       = ent_func.create_entity_graphics_and_shadow(entity_name, {
-        --Scale       = 0.5,
-        Frames        = 4,
-        EntityWidth   = 640,
-        EntityHeight  = 640,
-        --EntityShift = {0, 0},
-        ShadowWidth   = 640,
-        ShadowHeight  = 640,
-        --ShadowShift = {0, 0}
+        Scale        = 0.5,
+        Frames       = 4,
+        EntityWidth  = 640,
+        EntityHeight = 640,
+        EntityShift  = {0, 0},
+        ShadowWidth  = 640,
+        ShadowHeight = 640,
+        ShadowShift  = {0, 0}
     }),
     WindowIsTall        = true,
     WindowBox           = {{-0.2, (-1.5 + 12 / 64)}, {0.2, (0.5 + 14 / 64)}},

@@ -35,8 +35,8 @@ local entity_data = {
         --
     ),
     EntitySprites       = ent_func.create_entity_graphics_and_shadow(entity_name, {
-        --Scale      = 0.5,
-        --Frames     = 1,
+        Scale        = 0.5,
+        Frames       = 1,
         EntityWidth  =  64,
         EntityHeight = 192,
         EntityShift  = {0, -1},

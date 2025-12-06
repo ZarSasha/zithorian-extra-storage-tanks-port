@@ -35,7 +35,7 @@ local entity_data = {
         {27,  20,  0,  0}, {27,  20,  0,  0}
     ),
     SpriteSheet         = ent_func.create_entity_graphics_and_shadow_sheet(entity_name, {
-        --Scale      = 0.5,
+        Scale        = 0.5,
         Frames       = 4,
         EntityWidth  = 128,
         EntityHeight = 160,
