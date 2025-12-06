@@ -177,6 +177,10 @@ end
 
 -- Creates the final entity prototype table to be added to database.
 shared_functions.create_entity = function(EntityName, Info)
+    local sound_sizes   = {
+        ["small"]  = {"metal-small", sounds.metal_small_open, sounds.metal_small_close},
+        ["large"]  = {"metal-large", sounds.metal_large_open, sounds.metal_large_close}
+    }
     local entity = {
         type = "storage-tank",
         name = EntityName,
@@ -225,9 +229,9 @@ shared_functions.create_entity = function(EntityName, Info)
         },
         flow_length_in_ticks = Info.FluidFlowLength,
         damaged_trigger_effect = hit_effects.entity(),
-        impact_category = "metal-"..Info.SoundSizeCategory,
-        open_sound = sounds["metal_"..Info.SoundSizeCategory.."_open" ],
-        close_sound = sounds["metal_"..Info.SoundSizeCategory.."_close"],
+        impact_category = sound_sizes[Info.SoundSizeCategory][1],
+        open_sound = sound_sizes[Info.SoundSizeCategory][2],
+        close_sound = sound_sizes[Info.SoundSizeCategory][3],
         working_sound = {
             sound = {
                 filename = "__base__/sound/storage-tank.ogg",
