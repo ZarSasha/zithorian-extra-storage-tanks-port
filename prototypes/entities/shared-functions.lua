@@ -199,6 +199,7 @@ shared_functions.create_entity = function(EntityName, Info)
             BoundingBox     = Info.SelectionBox,
             CollisionOffset = Info.CollisionOffset
         }),
+        tile_height = Info.TileHeight,
         drawing_box_vertical_extension = Info.DrawBoxVertExt,
         icon_draw_specification = Info.IconDrawSpec,
         fluid_box = {
