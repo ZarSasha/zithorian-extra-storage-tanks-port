@@ -300,13 +300,25 @@ shared_functions.create_explosion = function(EntityName, Info)
     local AnimHeight    = Info.AnimHeight or 0  -- number
     local DebrisAmountX = Info.DebrisAmountX    -- number
     local DebrisSpeedX  = Info.DebrisSpeedX     -- number
+
+    local sound_sizes   = {
+        ["small"]  = sounds.small_explosion,
+        ["medium"] = sounds.medium_explosion,
+        ["large"]  = sounds.large_explosion
+    }
+    local anim_sizes  = {
+        ["small"]  = explosion_animations.small_explosion,
+        ["medium"] = explosion_animations.medium_explosion,
+        ["large"]  = explosion_animations.large_explosion
+    }
+
     ---@diagnostic disable-next-line: undefined-field
     local explosion = table.deepcopy(data.raw["explosion"]["storage-tank-explosion"])
     explosion.name = EntityName .. "-explosion"
     explosion.icon = ICON_PATH .. EntityName .. ".png"
-    explosion.animations = explosion_animations[AnimSizeCat .. "_explosion"](AnimScale)
+    explosion.animations = anim_sizes[AnimSizeCat](AnimScale)
     explosion.height = AnimHeight
-    explosion.sound = sounds[SoundSizeCat .. "_explosion"](SoundVolMin, SoundVolMax)
+    explosion.sound = sound_sizes[SoundSizeCat](SoundVolMin, SoundVolMax)
     local effects = explosion.created_effect.action_delivery.target_effects
     for _, effect in pairs(effects) do
         effect["repeat_count"] =

@@ -9,6 +9,7 @@
 
 -- Create settings to adjust capacity for each of the storage tanks.
 local startup_settings = {}
+
 for variant, volume in pairs({
     ["1x1"] =   3000,
     ["2x2"] =  12000,
@@ -24,7 +25,7 @@ for variant, volume in pairs({
     })
 end
 
-data:extend({startup_settings})
+data:extend(startup_settings)
 
 ---------------------------------------------------------------------------------------------------
 -- END NOTES
