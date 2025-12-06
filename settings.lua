@@ -7,27 +7,29 @@
 -- STARTUP SETTINGS
 ---------------------------------------------------------------------------------------------------
 
-local function create_startup_setting(Name, Value)
-    data:extend({{
+-- Create settings to adjust capacity for each of the storage tanks.
+for variant, volume in pairs({
+    ["1x1"] =   3000,
+    ["2x2"] =  12000,
+    ["3x4"] =  72000,
+    ["5x5"] = 150000
+}) do
+    local startup_settings = {}
+    table.insert(startup_settings, {
         type = "double-setting",
-        name = Name,
+        name = "zith-startup-storage-tank-"..variant.."-volume",
+        localised_name = {
+            variant, " ", "entity-name.storage-tank", "mod-setting-name.zith-volume"
+        },
         setting_type = "startup",
-        minimum_value = 100,
-        default_value = Value
-    }})
-end
-
-local storage_tank_capacities = {
-    ["zith-storage-tank-1x1"] =   3600,
-    ["zith-storage-tank-2x2"] =  12000,
-    ["zith-storage-tank-3x4"] =  96000,
-    ["zith-storage-tank-5x5"] = 160000
-}
-
-for storage_tank, volume in pairs(storage_tank_capacities) do
-    data:extend({create_startup_setting(storage_tank.."-volume", volume)})
+        default_value = volume,
+        minimum_value = 100
+    })
+    data:extend({startup_settings})
 end
 
 ---------------------------------------------------------------------------------------------------
 -- END NOTES
 ---------------------------------------------------------------------------------------------------
+
+-- Expected format in locale: "zith-startup-setting-storage_tank-1x1-volume"

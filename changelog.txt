@@ -4,7 +4,7 @@ Date: 2025-12-04
   Changes:
     - IMPORTANT: Changed name ID's of entities and settings, for the sake of consistency, to make
       them internally easier to work with and to make them more unique (relevant for other mods).
-      Added migrations for entities (but not settings) to mitigate effects of the change.
+      Added migrations to mitigate effects of the change.
       IMPORTANT: Rebuilt assets for 3x4 storage tank and greatly simplified code that makes
       reference to it. May require update of any mods that clone the entity and modifies the
       graphics. (TODO: address issue for "Color Coded Pipes".)
@@ -16,9 +16,9 @@ Date: 2025-12-04
     - Compatibility: The 'no-rotation' script for the 3x4 storage tank now also applies to any
       clones (with similar names, of course), like those from the mod "Color Coded Pipes".
   Info:
-    - Improved descriptions of storage tanks.
+    - Improved descriptions of storage tanks and settings.
   Translation:
-    - TODO: Update translations.
+    - Updated translations on a basic level, with the use of using DeepL.
   Internal:
     - Completely overhauled code to make it more consistent and easier to understand. NOT DONE.
 ---------------------------------------------------------------------------------------------------
