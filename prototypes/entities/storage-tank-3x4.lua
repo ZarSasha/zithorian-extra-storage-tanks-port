@@ -68,8 +68,8 @@ local explosion_data = {
     DebrisSpeedX    = 1.05
 }
 local remnants_data = {
-    Radius          = 2.5,
-    Shift           = {43, 32}
+    Radius          = 1.5,
+    Shift           = {27, 21}
 }
 local item_data = {
     SoundSizeCat    = "large",
