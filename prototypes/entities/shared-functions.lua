@@ -33,11 +33,13 @@ end
 -- WIRE CONNECTIONS --
 
 -- Creates a single wire connection for a single orientation, for use in a set.
-local function create_single_wire_connection_for_set(Info)
+local function create_single_wire_connection_for_set(
+    WireVariation, PixelX, PixelY, ShadowOffsetY
+)
     return {
-        variation     = Info.WireVariation,
-        main_offset   = util.by_pixel(Info.PixelX, Info.PixelY),
-        shadow_offset = util.by_pixel(Info.PixelX, Info.PixelY + Info.ShadowOffsetY),
+        variation     = WireVariation,
+        main_offset   = util.by_pixel(PixelX, PixelY),
+        shadow_offset = util.by_pixel(PixelX, PixelY + ShadowOffsetY),
         show_shadow   = false
     }
 end
