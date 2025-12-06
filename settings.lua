@@ -29,4 +29,4 @@ end
 -- END NOTES
 ---------------------------------------------------------------------------------------------------
 
--- Expected format in locale: "zith-startup-setting-storage_tank-1x1-volume"
+-- Expected format in locale: "zith-startup-storage_tank-1x1-volume"
