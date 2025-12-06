@@ -4,7 +4,7 @@
 --  ┣┛┛┗┗┛ ┻ ┗┛ ┻ ┗┛┣┛┗┛┗┛
 ---------------------------------------------------------------------------------------------------
 require "shared"
-local ent_func = require "prototypes.entities.entity-functions"
+local shfunc = require "prototypes.entities.shared-functions"
 ---------------------------------------------------------------------------------------------------
 -- FLUID STORAGE TANK 3X4 --
 ---------------------------------------------------------------------------------------------------
@@ -30,11 +30,11 @@ local entity_data = {
         --
         --
     },
-    WireConnections     = ent_func.create_four_different_wire_connections(
+    WireConnections     = shfunc.create_four_different_wire_connections(
         {25, -27.5, -3.5, 0}, { 2, 64.5,-39.5, 12},
         { 0,  28.5, 48.5, 0}, { 6,-64.5, 13.5,  0}
     ),
-    EntitySprites       = ent_func.create_entity_graphics_and_shadow(entity_name, {
+    EntitySprites       = shfunc.create_entity_graphics_and_shadow(entity_name, {
         Scale        = 0.5,
         Frames       = 4,
         EntityWidth  = 640,
@@ -86,13 +86,11 @@ local recipe_data = {
 -- FINAL DATA WRITE --
 ---------------------------------------------------------------------------------------------------
 data:extend({
-    -- Entity
-    ent_func.create_explosion(entity_name, explosion_data),
-    ent_func.create_remnants (entity_name, remnants_data ),
-    ent_func.create_entity   (entity_name, entity_data   ),
-    -- Other
-    ent_func.create_item     (entity_name, item_data     ),
-    ent_func.create_recipe   (entity_name, recipe_data   )
+    shfunc.create_explosion(entity_name, explosion_data),
+    shfunc.create_remnants (entity_name, remnants_data ),
+    shfunc.create_entity   (entity_name, entity_data   ),
+    shfunc.create_item     (entity_name, item_data     ),
+    shfunc.create_recipe   (entity_name, recipe_data   )
 })
 
 ---------------------------------------------------------------------------------------------------

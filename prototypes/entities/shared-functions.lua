@@ -11,9 +11,9 @@ local sounds               = require "__base__.prototypes.entity.sounds"
 local item_sounds          = require "__base__.prototypes.item_sounds"
 local explosion_animations = require "__base__.prototypes.entity.explosion-animations"
 ---------------------------------------------------------------------------------------------------
--- ENTITY FUNCTIONS --
+-- SHARED FUNCTIONS
 ---------------------------------------------------------------------------------------------------
-local entity_functions = {}
+local shared_functions = {}
 ---------------------------------------------------------------------------------------------------
     -- ENTITY PROTOTYPE CREATION
 ---------------------------------------------------------------------------------------------------
@@ -45,7 +45,7 @@ local function create_single_wire_connection_for_set(
 end
 
 -- Creates a full set of individually configured wire connections for each orientation.
-entity_functions.create_four_different_wire_connections = function(
+shared_functions.create_four_different_wire_connections = function(
     WireNorth, WireEast, WireSouth, WireWest
 )
     return circuit_connector_definitions.create_vector(
@@ -58,7 +58,7 @@ entity_functions.create_four_different_wire_connections = function(
 end
 
 -- Creates a full set of identical wire connections for all orientations.
-entity_functions.create_four_identical_wire_connections = function(
+shared_functions.create_four_identical_wire_connections = function(
     WireVariation, PixelShiftX, PixelShiftY, ShadowPixelOffset
 )
     local WireOffset        = util.by_pixel(PixelShiftX, PixelShiftY)
@@ -78,7 +78,7 @@ end
 -- GRAPHICS ---------------------------------------------------------------------------------------
 
 -- Creates a table with two subtables containing entity and shadows graphics.
-entity_functions.create_entity_graphics_and_shadow = function(EntityName, Info)
+shared_functions.create_entity_graphics_and_shadow = function(EntityName, Info)
     local Scale        = Info.Scale or 0.5 -- number
     local Frames       = Info.Frames       -- number
     local EntityWidth  = Info.EntityWidth  -- number
@@ -176,7 +176,7 @@ end
 -- ENTITY PROTOTYPE CREATION --
 
 -- Creates the final entity prototype table to be added to database.
-entity_functions.create_entity = function(EntityName, Info)
+shared_functions.create_entity = function(EntityName, Info)
     local entity = {
         type = "storage-tank",
         name = EntityName,
@@ -246,7 +246,7 @@ end
 ---------------------------------------------------------------------------------------------------
     -- ITEM PROTOTYPE CREATION
 ---------------------------------------------------------------------------------------------------
-entity_functions.create_item = function(EntityName, Info)
+shared_functions.create_item = function(EntityName, Info)
     local SoundSizeCat = Info.SoundSizeCat -- string: "small" or "large"
     local StackSize    = Info.StackSize    -- number
     local Weight       = Info.Weight       -- number
@@ -269,7 +269,7 @@ end
 ---------------------------------------------------------------------------------------------------
     -- RECIPE PROTOTYPE CREATION
 ---------------------------------------------------------------------------------------------------
-entity_functions.create_recipe = function(EntityName, Info)
+shared_functions.create_recipe = function(EntityName, Info)
     local EnergyNeed  = Info.EnergyNeed  -- number
     local IronPlates  = Info.IronPlates  -- number
     local SteelPlates = Info.SteelPlates -- number
@@ -291,7 +291,7 @@ end
 ---------------------------------------------------------------------------------------------------
     -- EXPLOSION PROTOTYPE CREATION
 ---------------------------------------------------------------------------------------------------
-entity_functions.create_explosion = function(EntityName, Info)
+shared_functions.create_explosion = function(EntityName, Info)
     local SoundSizeCat  = Info.SoundSizeCat     -- string: "small", "medium" or "large"
     local SoundVolMin   = Info.SoundVolMin or 1 -- number
     local SoundVolMax   = Info.SoundVolMax or 1 -- number
@@ -326,7 +326,7 @@ end
 ---------------------------------------------------------------------------------------------------
     -- REMNANTS PROTOTYPE CREATION
 ---------------------------------------------------------------------------------------------------
-entity_functions.create_remnants = function(EntityName, Info)
+shared_functions.create_remnants = function(EntityName, Info)
     local TileRadius = Info.TileRadius or 1.5    -- number
     local PixelShift = Info.PixelShift or {0, 0} -- number array
     local x,y  = table.unpack(PixelShift)
@@ -359,10 +359,5 @@ entity_functions.create_remnants = function(EntityName, Info)
 end
 
 ---------------------------------------------------------------------------------------------------
--- TO BE RETURNED (USEABLE WITH REQUIRE FUNCTION)
----------------------------------------------------------------------------------------------------
-return entity_functions
-
----------------------------------------------------------------------------------------------------
--- END NOTES
+return shared_functions
 ---------------------------------------------------------------------------------------------------

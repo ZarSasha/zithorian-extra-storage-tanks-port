@@ -5,7 +5,7 @@
 ---------------------------------------------------------------------------------------------------
 require "prototypes.entities.storage-tank-1x1"
 require "prototypes.entities.storage-tank-2x2"
-require "prototypes.storage-tank-3x4"
+require "prototypes.entities.storage-tank-3x4"
 require "prototypes.entities.storage-tank-5x5"
 require "prototypes.technology"
 ---------------------------------------------------------------------------------------------------

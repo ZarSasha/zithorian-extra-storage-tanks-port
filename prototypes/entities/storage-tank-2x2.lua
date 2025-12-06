@@ -4,7 +4,7 @@
 --  ┣┛┛┗┗┛ ┻ ┗┛ ┻ ┗┛┣┛┗┛┗┛
 ---------------------------------------------------------------------------------------------------
 require "shared"
-local ent_func = require "prototypes.entities.entity-functions"
+local shfunc = require "prototypes.entities.shared-functions"
 ---------------------------------------------------------------------------------------------------
 -- FLUID STORAGE TANK 2X2 --
 ---------------------------------------------------------------------------------------------------
@@ -30,11 +30,11 @@ local entity_data = {
         { direction = defines.direction.west,  position = {-0.5,-0.5} }
         --
     },
-    WireConnections     = ent_func.create_four_different_wire_connections(
+    WireConnections     = shfunc.create_four_different_wire_connections(
         {25, -20,  0,  0}, {25, -20,  0,  0},
         {27,  20,  0,  0}, {27,  20,  0,  0}
     ),
-    SpriteSheet         = ent_func.create_entity_graphics_and_shadow_sheet(entity_name, {
+    SpriteSheet         = shfunc.create_entity_graphics_and_shadow_sheet(entity_name, {
         Scale        = 0.5,
         Frames       = 4,
         EntityWidth  = 128,
@@ -86,13 +86,11 @@ local recipe_data = {
 -- FINAL DATA WRITE --
 ---------------------------------------------------------------------------------------------------
 data:extend({
-    -- Entity
-    ent_func.create_explosion(entity_name, explosion_data),
-    ent_func.create_remnants (entity_name, remnants_data ),
-    ent_func.create_entity   (entity_name, entity_data   ),
-    -- Other
-    ent_func.create_item     (entity_name, item_data     ),
-    ent_func.create_recipe   (entity_name, recipe_data   )
+    shfunc.create_explosion(entity_name, explosion_data),
+    shfunc.create_remnants (entity_name, remnants_data ),
+    shfunc.create_entity   (entity_name, entity_data   ),
+    shfunc.create_item     (entity_name, item_data     ),
+    shfunc.create_recipe   (entity_name, recipe_data   )
 })
 
 ---------------------------------------------------------------------------------------------------
