@@ -6,9 +6,9 @@
     ["fluid-tank-5x5", "zith-storage-tank-5x5"]
   ],
   "mod-settings": [
-    ["z-fluid-tank-1x1-volume", zith-storage-tank-1x1-volume],
-    ["z-fluid-tank-2x2-volume", zith-storage-tank-2x2-volume],
-    ["z-fluid-tank-3x4-volume", zith-storage-tank-3x4-volume],
-    ["z-fluid-tank-5x5-volume", zith-storage-tank-5x5-volume]
+    ["z-fluid-tank-1x1-volume", zith-storage-tank-1x1-volume-setting],
+    ["z-fluid-tank-2x2-volume", zith-storage-tank-2x2-volume-setting],
+    ["z-fluid-tank-3x4-volume", zith-storage-tank-3x4-volume-setting],
+    ["z-fluid-tank-5x5-volume", zith-storage-tank-5x5-volume-setting]
   ]
 }

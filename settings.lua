@@ -11,14 +11,14 @@
 local startup_settings = {}
 
 for variant, volume in pairs({
-    ["1x1"] =   3000,
-    ["2x2"] =  12000,
-    ["3x4"] =  72000,
-    ["5x5"] = 150000
+    ["zith-storage-tank-1x1"] =   3000,
+    ["zith-storage-tank-2x2"] =  12000,
+    ["zith-storage-tank-3x4"] =  72000,
+    ["zith-storage-tank-5x5"] = 150000
 }) do
     table.insert(startup_settings, {
         type = "double-setting",
-        name = "zith-startup-storage-tank-"..variant.."-volume",
+        name = variant.."-volume-setting",
         setting_type = "startup",
         default_value = volume,
         minimum_value = 100

@@ -31,7 +31,7 @@ local entity_data = {
         { direction = defines.direction.west,  position = {-2,-2} }
     },
     WireConnections     = shfunc.create_four_identical_wire_connections(
-         25, -61.5, 33.5, 12
+        {25, -61.5, 33.5, 12}
         --
     ),
     SpriteSheet         = shfunc.create_entity_graphics_and_shadow_sheet(entity_name, {

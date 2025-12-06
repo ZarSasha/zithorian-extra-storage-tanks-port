@@ -33,13 +33,11 @@ end
 -- WIRE CONNECTIONS --
 
 -- Creates a single wire connection for a single orientation, for use in a set.
-local function create_single_wire_connection_for_set(
-    WireVariation, PixelX, PixelY, ShadowOffsetY
-)
+local function create_single_wire_connection_for_set(Info)
     return {
-        variation     = WireVariation,
-        main_offset   = util.by_pixel(PixelX, PixelY),
-        shadow_offset = util.by_pixel(PixelX, PixelY + ShadowOffsetY),
+        variation     = Info.WireVariation,
+        main_offset   = util.by_pixel(Info.PixelX, Info.PixelY),
+        shadow_offset = util.by_pixel(Info.PixelX, Info.PixelY + Info.ShadowOffsetY),
         show_shadow   = false
     }
 end
@@ -198,7 +196,7 @@ shared_functions.create_entity = function(EntityName, Info)
         drawing_box_vertical_extension = Info.DrawBoxVertExt,
         icon_draw_specification = Info.IconDrawSpec,
         fluid_box = {
-            volume = settings.startup["zith-startup-"..EntityName.."-volume"].value,
+            volume = settings.startup[EntityName.."-volume-setting"].value,
             pipe_covers = pipecoverspictures(),
             pipe_connections = Info.PipeConnections,
             hide_connection_Info = true
