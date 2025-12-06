@@ -1,0 +1,1 @@
+Image replaced in order to greatly simplify the code referencing it.
