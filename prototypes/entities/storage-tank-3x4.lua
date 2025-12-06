@@ -61,9 +61,9 @@ local explosion_data = {
     SoundSizeCat    = "large",
     SoundVolMin     = 0.5,
     SoundVolMax     = 0.7,
-    --AnimSizeCat   = "medium",
-    --AnimScale     = 1,
-    --AnimHeight    = 0,
+    AnimSizeCat     = "medium",
+    AnimScale       = 1,
+    AnimHeight      = 0,
     DebrisAmountX   = 1.8,
     DebrisSpeedX    = 1.05
 }

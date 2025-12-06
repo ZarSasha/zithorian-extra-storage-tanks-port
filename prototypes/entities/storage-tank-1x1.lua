@@ -62,8 +62,8 @@ local explosion_data = { -- used by entity
     --SoundVolMin   = 1,
     --SoundVolMax   = 1,
     AnimSizeCat     = "small",
-    --AnimScale     = 1,
-    --AnimHeight    = 0,
+    AnimScale       = 1,
+    AnimHeight      = 0,
     DebrisAmountX   = 0.5,
     DebrisSpeedX    = 0.825
 }

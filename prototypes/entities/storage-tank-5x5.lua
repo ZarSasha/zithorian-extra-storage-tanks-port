@@ -59,10 +59,10 @@ local entity_data = {
 ---------------------------------------------------------------------------------------------------
 local explosion_data = {
     SoundSizeCat    = "large",
-    --SoundVolMin   = 1,
-    --SoundVolMax   = 1,
-    AnimSizeCat     = "large",
-    --AnimScale     = 1,
+    SoundVolMin     = 1,
+    SoundVolMax     = 1,
+    AnimSizeCat     = "big",
+    AnimScale       = 1,
     AnimHeight      = 1,
     DebrisAmountX   = 3,
     DebrisSpeedX    = 1.1
