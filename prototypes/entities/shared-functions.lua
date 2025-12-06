@@ -178,7 +178,7 @@ end
 -- Creates the final entity prototype table to be added to database.
 shared_functions.create_entity = function(EntityName, Info)
     local sound_sizes   = {
-        ["small"]  = {"metal-small", sounds.metal_small_open, sounds.metal_small_close},
+        ["small"]  = {"metal",       sounds.metal_small_open, sounds.metal_small_close},
         ["large"]  = {"metal-large", sounds.metal_large_open, sounds.metal_large_close}
     }
     local entity = {
