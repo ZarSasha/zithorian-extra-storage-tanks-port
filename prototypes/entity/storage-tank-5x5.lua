@@ -35,14 +35,14 @@ local entity_data = {
         --
     ),
     SpriteSheet         = ent_func.create_entity_graphics_and_shadow_sheet(entity_name, {
-        --Scale      = 0.5,
-        --Frames     = 1
-        EntityWidth  = 320,
-        EntityHeight = 384,
-        EntityShift  = {0, -0.5},
-        ShadowWidth  = 384,
-        ShadowHeight = 352,
-        ShadowShift  = {0.5, 0.25},
+        --Scale         = 0.5,
+        --Frames        = 1
+        EntityWidth     = 320,
+        EntityHeight    = 384,
+        EntityShift     = {0, -0.5},
+        ShadowWidth     = 384,
+        ShadowHeight    = 352,
+        ShadowShift     = {0.5, 0.25},
     }),
     WindowIsTall        = false,
     WindowBox           = {{-0.2, (0.5 + 24 / 64)}, {0.2, (2.5 - 41 / 64)}},
