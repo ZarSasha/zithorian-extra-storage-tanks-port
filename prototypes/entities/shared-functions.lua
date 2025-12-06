@@ -46,14 +46,14 @@ end
 
 -- Creates a full set of individually configured wire connections for each orientation.
 shared_functions.create_four_different_wire_connections = function(
-    WireNorth, WireEast, WireSouth, WireWest
+    WireNorth, WireEast, WireSouth, WireWest -- number arrays
 )
     return circuit_connector_definitions.create_vector(
         universal_connector_template, {
-        create_single_wire_connection_for_set(WireNorth),
-        create_single_wire_connection_for_set(WireEast ),
-        create_single_wire_connection_for_set(WireSouth),
-        create_single_wire_connection_for_set(WireWest )
+        create_single_wire_connection_for_set(table.unpack(WireNorth)),
+        create_single_wire_connection_for_set(table.unpack(WireEast )),
+        create_single_wire_connection_for_set(table.unpack(WireSouth)),
+        create_single_wire_connection_for_set(table.unpack(WireWest ))
     })
 end
 
