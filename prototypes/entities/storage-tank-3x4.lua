@@ -51,7 +51,7 @@ local entity_data = {
     FluidFlowScale      = 1.2,
     SoundSizeCategory   = "large",
     SoundVolume         = 0.6,
-    HeatingEnergy       = "210kW" -- On Aquilo
+    HeatingEnergy       = "175kW" -- On Aquilo
 }
 
 ---------------------------------------------------------------------------------------------------

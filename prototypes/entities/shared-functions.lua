@@ -32,7 +32,7 @@ end
 
 -- WIRE CONNECTIONS --
 
--- Creates a single wire connection for a single orientation, for use in a set.
+-- Creates a single wire connection for a single orientation, for use in a set. CHECK LATER.
 local function create_single_wire_connection_for_set(
     WireVariation, PixelX, PixelY, ShadowOffsetY
 )
@@ -205,7 +205,9 @@ shared_functions.create_entity = function(EntityName, Info)
         },
         window_bounding_box = Info.WindowBox,
         pictures = {
-            picture = Info.EntitySprites,
+            picture = {
+                sheets = Info.EntitySprites
+            },
             window_background = create_window_background({
                 WindowIsTall    = Info.WindowIsTall,
                 Scale           = Info.WindowScale
