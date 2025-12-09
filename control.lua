@@ -8,7 +8,7 @@
 ---------------------------------------------------------------------------------------------------
 -- Normal rotation can cause the storage tank to overlap with nearby entities, due to its unequal
 -- side lengths. This script prevents rotation without making problematic changes to the prototype
--- itself. Performance cost seems neglible.
+-- itself. Performance seems perfectly fine.
 
 local function disable_rotation_of_entity(event)
     if string.find(event.entity.name, "zith-storage-tank-3x4", 1, true) then
