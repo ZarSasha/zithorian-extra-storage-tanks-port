@@ -14,8 +14,7 @@ if fluid_handling_tech ~= nil then
     local function add(RecipeName)
         table.insert(fluid_handling_tech.effects, {type = "unlock-recipe", recipe = RecipeName})
     end
-    add(STORAGE_TANK_NAME["1x1"]) add(STORAGE_TANK_NAME["2x2"])
-    add(STORAGE_TANK_NAME["3x4"]) add(STORAGE_TANK_NAME["5x5"])
+    for _, variant in pairs({"1x1","2x2","3x4","5x5"}) do add(STORAGE_TANK_NAME[variant]) end
 end
 
 ---------------------------------------------------------------------------------------------------
