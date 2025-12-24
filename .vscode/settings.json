@@ -15,6 +15,7 @@
         "hit_effects",
         "script",
         "prototypes",
-        "storage"
+        "storage",
+        "game"
     ]
 }

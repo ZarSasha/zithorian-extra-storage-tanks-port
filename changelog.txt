@@ -1,10 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.0
-Date: 2025-12-24
+Date: 2025-12-25
   Changes:
     - IMPORTANT: Changed name ID's of entities and settings for the sake of consistency, to make
       them internally easier to work with and to make them more unique. This may affect other mods
-      (such as "Color Coded Pipes"). Added migrations to otherwise mitigate effects of the change.
+      (such as "Color Coded Pipes"). Added migrations to at least preserve all built entities, but
+      settings must be manually updated, if they were ever changed.
       IMPORTANT: Rearranged graphics assets for 3x4 storage tank and greatly simplified code that
       references it. This may affect other mods (such as "Color Coded Pipes").
     - Moved code for unlocking technology from second to first prototype stage.
@@ -15,6 +16,7 @@ Date: 2025-12-24
       clones (with similar names, of course), like those from the mod "Color Coded Pipes".
   Info:
     - Improved or simplified descriptions of storage tanks and settings.
+    - Added migration message instructing user to reconfigure settings.
   Translation:
     - Updated translations with the use of DeepL.
   Internal:
