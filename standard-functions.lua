@@ -10,7 +10,7 @@
 local standard_functions = {}
 
 -- Rounds a number with the desired level of precision.
-standard_functions.round_value = function (num, decimals)
+standard_functions.round_number = function (num, decimals)
     decimals = 10 ^ (decimals or 0)
     num = num * decimals
     if num >= 0 then num = math.floor(num + 0.5) else num = math.ceil(num - 0.5) end

@@ -324,7 +324,7 @@ special_functions.create_explosion = function(EntityName, Info)
     local effects = explosion.created_effect.action_delivery.target_effects
     for _, effect in pairs(effects) do
         effect["repeat_count"] =
-            std_func.round_value(effect["repeat_count"] * DebrisAmountX)
+            std_func.round_number(effect["repeat_count"] * DebrisAmountX)
         effect["initial_vertical_speed"] =
             effect["initial_vertical_speed"] * DebrisSpeedX
         effect["initial_vertical_speed_deviation"] =
