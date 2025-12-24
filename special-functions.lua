@@ -210,14 +210,14 @@ special_functions.create_entity = function(EntityName, Info)
                 Scale           = Info.WindowScale
             }),
             fluid_background  = create_fluid_background({
-                Scale           = Info.FluidFlowScale
+                Scale           = Info.FluidScale
             }),
             flow_sprite       = create_flow_sprite({
                 WindowIsTall    = Info.WindowIsTall,
                 Scale           = Info.FluidFlowScale
             }),
             gas_flow          = create_gas_flow_sprite({
-                Scale           = Info.FluidFlowScale
+                Scale           = Info.FluidScale
             })
         },
         flow_length_in_ticks = Info.FluidFlowLength,

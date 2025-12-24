@@ -49,6 +49,7 @@ local entity_data = {
     WindowBox           = {{-0.1, (-1.5 + 30 / 64)}, {0.1, (0.5 - 46 / 64)}},
     WindowScale         = 0.8,
     FluidFlowLength     = 575,
+    FluidScale          = 0.8,
     FluidFlowScale      = 1.0,
     SoundSizeCategory   = "small",
     SoundVolume         = 0.4,
