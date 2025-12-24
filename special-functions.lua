@@ -167,13 +167,19 @@ end
 
 -- Creates the final entity prototype table to be added to database.
 special_functions.create_entity = function(EntityName, Info)
+    -- Dictionaries, data conversion:
     local sound_sizes   = {
         ["small"]  = {"metal",       sounds.metal_small_open, sounds.metal_small_close},
         ["large"]  = {"metal-large", sounds.metal_large_open, sounds.metal_large_close}
     }
+    local setting = std_func.round_number(
+        settings.startup[EntityName.."-volume-setting"].value/1000, 0
+    )
+    -- Main table:
     local entity = {
         type = "storage-tank",
         name = EntityName,
+        localised_description = {"entity-description."..EntityName, tostring(setting),},
         icon = ICON_PATH .. EntityName .. ".png",
         flags = {"placeable-player", "player-creation"},
         minable = {
