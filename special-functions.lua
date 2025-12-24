@@ -6,8 +6,8 @@
 require "util"
 require "shared"
 local std_func             = require "standard-functions"
-local hit_effects          = require "__base__.prototypes.entity.hit-effects"
 local sounds               = require "__base__.prototypes.entity.sounds"
+local hit_effects          = require "__base__.prototypes.entity.hit-effects"
 local item_sounds          = require "__base__.prototypes.item_sounds"
 local explosion_animations = require "__base__.prototypes.entity.explosion-animations"
 ---------------------------------------------------------------------------------------------------
@@ -98,7 +98,7 @@ special_functions.create_entity_graphics_and_shadow = function(EntityName, Info)
     }}
 end
 
--- Create window background graphics.
+-- Creates window background graphics.
 local function create_window_background(Info)
     if Info.WindowIsTall then return {
         filename = GRAPHICS_PATH .. "tall-window-background" .. ".png",
@@ -118,7 +118,7 @@ local function create_window_background(Info)
     } end
 end
 
--- Create fluid background graphics.
+-- Creates fluid background graphics.
 local function create_fluid_background(Info)
     return {
         filename = "__base__/graphics/entity/storage-tank/fluid-background.png",
@@ -129,7 +129,7 @@ local function create_fluid_background(Info)
     }
 end
 
--- Create flow graphics.
+-- Creates flow graphics.
 local function create_flow_sprite(Info)
     if Info.WindowIsTall then return {
         filename = GRAPHICS_PATH .. "fluid-flow-low-temperature-extended.png",
@@ -147,7 +147,7 @@ local function create_flow_sprite(Info)
     } end
 end
 
--- Create gas flow graphics.
+-- Creates gas flow graphics.
 local function create_gas_flow_sprite(Info)
     return {
         filename            = "__base__/graphics/entity/pipe/steam.png",
@@ -167,7 +167,7 @@ end
 
 -- Creates the final entity prototype table to be added to database.
 special_functions.create_entity = function(EntityName, Info)
-    -- Dictionaries, data conversion:
+    -- Dictionary:
     local sound_sizes   = {
         ["small"]  = {"metal",       sounds.metal_small_open, sounds.metal_small_close},
         ["large"]  = {"metal-large", sounds.metal_large_open, sounds.metal_large_close}
