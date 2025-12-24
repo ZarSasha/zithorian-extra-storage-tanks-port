@@ -159,7 +159,7 @@ local function create_gas_flow_sprite(Info)
         axially_symmetrical = false,
         animation_speed     = 0.25,
         direction_count     = 1,
-        scale               = 0.5 * Info.Scale
+        scale               = 0.6 * Info.Scale
     }
 end
 
