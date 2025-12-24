@@ -16,7 +16,7 @@ Date: 2025-12-24
   Info:
     - Improved or simplified descriptions of storage tanks and settings.
   Translation:
-    - Updated translations on a basic level, with the use of DeepL.
+    - Updated translations with the use of DeepL.
   Internal:
     - Completely overhauled code to make it more compact, consistent and easier to understand.
 ---------------------------------------------------------------------------------------------------
