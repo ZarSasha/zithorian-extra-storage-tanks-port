@@ -31,4 +31,4 @@ data:extend(startup_settings)
 -- END NOTES
 ---------------------------------------------------------------------------------------------------
 
--- Expected format in locale: "zith-startup-storage_tank-1x1-volume"
+-- Expected format in locale: zith-storage-tank-1x1-volume-setting
