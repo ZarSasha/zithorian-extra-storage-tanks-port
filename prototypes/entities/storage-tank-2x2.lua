@@ -58,7 +58,7 @@ local entity_data = {
 ---------------------------------------------------------------------------------------------------
     -- OTHER PROTOTYPES (EXPLOSION, REMNANTS, ITEM, RECIPE)
 ---------------------------------------------------------------------------------------------------
-local explosion_data = {
+local explosion_data = { -- used by entity
     SoundSizeCat    = "medium",
     --SoundVolMin   = 1,
     --SoundVolMax   = 1,
@@ -68,7 +68,7 @@ local explosion_data = {
     DebrisAmountX   = 0.8,
     DebrisSpeedX    = 0.9
 }
-local remnants_data = {
+local remnants_data = { -- used by entity
     Radius          = 1,
     Shift           = {17, 12}
 }
