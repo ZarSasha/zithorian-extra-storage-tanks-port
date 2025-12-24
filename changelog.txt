@@ -14,7 +14,7 @@ Date: 2025-12-24
     - Compatibility: The 'no-rotation' script for the 3x4 storage tank now also applies to any
       clones (with similar names, of course), like those from the mod "Color Coded Pipes".
   Info:
-    - Improved descriptions of storage tanks and settings.
+    - Improved or simplified descriptions of storage tanks and settings.
   Translation:
     - Updated translations on a basic level, with the use of DeepL.
   Internal:
