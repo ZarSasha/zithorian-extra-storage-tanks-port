@@ -217,7 +217,7 @@ special_functions.create_entity = function(EntityName, Info)
                 Scale           = Info.FluidFlowScale
             }),
             gas_flow          = create_gas_flow_sprite({
-                Scale           = Info.FluidScale
+                Scale           = Info.FluidFlowScale
             })
         },
         flow_length_in_ticks = Info.FluidFlowLength,
