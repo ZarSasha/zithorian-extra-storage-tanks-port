@@ -32,7 +32,7 @@ local entity_data = {
         --
     },
     WireConnections     = spfunc.create_four_identical_wire_connections(
-         26, 7, -5, 2
+        {26, 7, -5, 2}
         --
     ),
     EntitySprites       = spfunc.create_entity_graphics_and_shadow(entity_name, {

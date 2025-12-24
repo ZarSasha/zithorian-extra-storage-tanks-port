@@ -11,7 +11,7 @@ local sounds               = require "__base__.prototypes.entity.sounds"
 local item_sounds          = require "__base__.prototypes.item_sounds"
 local explosion_animations = require "__base__.prototypes.entity.explosion-animations"
 ---------------------------------------------------------------------------------------------------
--- SHARED FUNCTIONS
+-- SPECIAL FUNCTIONS
 ---------------------------------------------------------------------------------------------------
 local special_functions = {}
 ---------------------------------------------------------------------------------------------------
@@ -20,7 +20,7 @@ local special_functions = {}
 
 -- BOUNDING BOXES --
 
--- Automatically creates collision box from the selection box and an offset value.
+-- Automatically creates a collision box from the selection box and an offset value.
 local function create_collision_box(Info)
     local BoundingBox     = Info.BoundingBox     -- 2x2 number array
     local CollisionOffset = Info.CollisionOffset -- number
@@ -32,14 +32,13 @@ end
 
 -- WIRE CONNECTIONS --
 
--- Creates a single wire connection for a single orientation, for use in a set. CHECK LATER.
-local function create_single_wire_connection_for_set(
-    WireVariation, PixelX, PixelY, ShadowOffsetY
-)
+-- Creates a single wire connection for a single orientation, for use in a set.
+local function create_single_wire_connection_for_set(Wire) -- number array
+    local WireVariation, PixelX, PixelY, ShadowPixelOffsetY = table.unpack(Wire)
     return {
         variation     = WireVariation,
         main_offset   = util.by_pixel(PixelX, PixelY),
-        shadow_offset = util.by_pixel(PixelX, PixelY + ShadowOffsetY),
+        shadow_offset = util.by_pixel(PixelX, PixelY + ShadowPixelOffsetY),
         show_shadow   = false
     }
 end
@@ -50,25 +49,16 @@ special_functions.create_four_different_wire_connections = function(
 )
     return circuit_connector_definitions.create_vector(
         universal_connector_template, {
-        create_single_wire_connection_for_set(table.unpack(WireNorth)),
-        create_single_wire_connection_for_set(table.unpack(WireEast )),
-        create_single_wire_connection_for_set(table.unpack(WireSouth)),
-        create_single_wire_connection_for_set(table.unpack(WireWest ))
+        create_single_wire_connection_for_set(WireNorth),
+        create_single_wire_connection_for_set(WireEast ),
+        create_single_wire_connection_for_set(WireSouth),
+        create_single_wire_connection_for_set(WireWest )
     })
 end
 
 -- Creates a full set of identical wire connections for all orientations.
-special_functions.create_four_identical_wire_connections = function(
-    WireVariation, PixelShiftX, PixelShiftY, ShadowPixelOffset
-)
-    local WireOffset        = util.by_pixel(PixelShiftX, PixelShiftY)
-    local WireShadowOffset  = util.by_pixel(PixelShiftX, PixelShiftY + ShadowPixelOffset)
-    local Connection = {
-        variation     = WireVariation,
-        main_offset   = WireOffset,
-        shadow_offset = WireShadowOffset,
-        show_shadow   = false
-    }
+special_functions.create_four_identical_wire_connections = function(Wire) -- number array
+    local Connection = create_single_wire_connection_for_set(Wire)
     local ConnectionSet = {Connection, Connection, Connection, Connection}
     return circuit_connector_definitions.create_vector(
         universal_connector_template, ConnectionSet
