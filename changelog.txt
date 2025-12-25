@@ -25,8 +25,9 @@ Date: 2025-12-25
     - 2x2 storage tank:
       - Fixed window size. In particular, made it one pixel taller so fluid/gas
         fills it out properly.
-      - TODO: Darken upper window border, to match other tanks?
-      - TODO: Make window graphics more consistent?
+    - 3x4 storage tank:
+      - Fixed window size. In particular, fixed pixel offset near top on three of four orientations.
+      - Made pixels near right window border completely opaque, to ensure perfect borders.
   Info:
     - Improved or simplified descriptions of storage tanks and settings.
     - Added migration message instructing user to reconfigure settings.
