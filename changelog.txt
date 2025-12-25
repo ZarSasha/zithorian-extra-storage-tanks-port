@@ -26,6 +26,7 @@ Date: 2025-12-25
       - Extended window bounding box one pixel up and down, so fluid/gas visually fills out window
         properly on all orientations.
       - Slimmed black edge near lower window border on one orientation for consistency.
+      - Darkened all window borders a bit, except the bottom one.
     - 3x4 storage tank:
       - Fixed window bounding box offset near top on three of four orientations.
       - Made pixels near right window border completely opaque, to ensure perfect borders.
