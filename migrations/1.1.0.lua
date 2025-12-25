@@ -5,6 +5,6 @@
 game.print("[color=acid]Zithorian's Extra Storage Tanks for 2.0:[/color]")
 game.print("  Regarding v1.1.0: Internal names of entities and settings were changed!")
 game.print("  If storage tank capacities were customized, it is best to exit to main menu")
-game.print("  without saving, reconfigure settings and then reload the save.")
+game.print("  without saving, reconfigure startup settings and then reload the save.")
 
 ---------------------------------------------------------------------------------------------------
