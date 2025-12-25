@@ -150,16 +150,16 @@ end
 -- Creates gas flow graphics.
 local function create_gas_flow_sprite(Info)
     return {
-        filename            = "__base__/graphics/entity/pipe/steam.png",
+        filename            = GRAPHICS_PATH .. "steam-narrowed.png",
         priority            = "extra-high",
         line_length         = 10,
-        width               = 48,
+        width               = 24,
         height              = 30,
         frame_count         = 60,
         axially_symmetrical = false,
         animation_speed     = 0.25,
         direction_count     = 1,
-        scale               = 0.5 * Info.Scale
+        scale               = Info.Scale
     }
 end
 
