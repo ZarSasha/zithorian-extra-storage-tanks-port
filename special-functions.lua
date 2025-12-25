@@ -150,11 +150,11 @@ end
 -- Creates gas flow graphics.
 local function create_gas_flow_sprite(Info)
     return {
-        filename            = GRAPHICS_PATH .. "steam-narrowed.png",
+        filename            = GRAPHICS_PATH .. "steam-narrowed-cropped.png",
         priority            = "extra-high",
         line_length         = 10,
         width               = 24,
-        height              = 30,
+        height              = 28,
         frame_count         = 60,
         axially_symmetrical = false,
         animation_speed     = 0.25,
