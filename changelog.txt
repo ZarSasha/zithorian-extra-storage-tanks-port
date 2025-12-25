@@ -17,6 +17,7 @@ Date: 2025-12-25
   Graphics:
     - Created custom variant of steam gas flow animation sprite to reduce stretching and eliminate
       shadow banding near top of window, especially for the 3x4 storage tank.
+    - 1x1 storage tank: Fixed window size to be consistent with the rest, darkened upper corners.
   Info:
     - Improved or simplified descriptions of storage tanks and settings.
     - Added migration message instructing user to reconfigure settings.
