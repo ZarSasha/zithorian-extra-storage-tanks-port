@@ -46,7 +46,7 @@ local entity_data = {
         ShadowShift  = {0.25, 0.5},
     }),
     WindowIsTall        = false,
-    WindowBox           = {{(-7 / 64), (10 / 64)}, {(7 / 64), (48 / 64)}},
+    WindowBox           = {{(-7/64), (10/64)}, {(7/64), (48/64)}},
     WindowScale         = 0.5,
     FluidFlowLength     = 405,
     FluidScale          = 1.0,

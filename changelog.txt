@@ -17,8 +17,16 @@ Date: 2025-12-25
   Graphics:
     - Created custom variant of steam gas flow animation sprite to reduce stretching and eliminate
       shadow banding near top of window, especially for the 3x4 storage tank.
-    - 1x1 storage tank: Fixed window size to be consistent with the rest, darkened upper and right
-      border, and in particular upper corners.
+    - 1x1 storage tank:
+      - Fixed window size. In particular, reduced height a bit to ensure that scaling with
+        fluid/gas content is consistent with that of the rest of the tanks.
+      - Darkened upper and right window border, and in particular upper corners (they were clearly
+        too bright when tank was filled with steam).
+    - 2x2 storage tank:
+      - Fixed window size. In particular, made it one pixel taller so fluid/gas
+        fills it out properly.
+      - TODO: Darken upper window border, to match other tanks?
+      - TODO: Make window graphics more consistent?
   Info:
     - Improved or simplified descriptions of storage tanks and settings.
     - Added migration message instructing user to reconfigure settings.
