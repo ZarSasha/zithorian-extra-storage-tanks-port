@@ -339,12 +339,11 @@ end
 special_functions.create_remnants = function(EntityName, Info)
     local TileRadius = Info.TileRadius or 1.5    -- number
     local PixelShift = Info.PixelShift or {0, 0} -- number array
-    local x,y  = table.unpack(PixelShift)
     return {
         type = "corpse",
         name = EntityName .. "-remnants",
         icon = "__base__/graphics/icons/storage-tank.png",
-        flags = {"placeable-neutral", "building-direction-8-way", "not-on-map"},
+        flags = {"placeable-neutral", "not-on-map"},
         hidden_in_factoriopedia = true,
         subgroup = "storage-remnants",
         order = "a-d-a",
@@ -362,7 +361,7 @@ special_functions.create_remnants = function(EntityName, Info)
             width = 426,
             height = 282,
             direction_count = 1,
-            shift = util.by_pixel(x,y),
+            shift = util.by_pixel(table.unpack(PixelShift)),
             scale = 0.5 * (TileRadius / 1.5)
         })
     }
