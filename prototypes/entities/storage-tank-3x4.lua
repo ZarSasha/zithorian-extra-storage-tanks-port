@@ -18,7 +18,7 @@ local entity_data = {
     --FastReplaceGroup  = nil,
     SelectionBox        = {{-1.5,-2.5},{ 1.5, 1.5}}, -- height in north/south orientation: 4 tiles
     CollisionOffset     = -0.1,
-    TileHeight          = 3, -- pretends that height is only 3 tiles, for correct grid placement
+    TileHeight          = 3, -- declares that height is only 3 tiles, for correct grid placement
     DrawBoxVertExt      = 2.15,
     IconDrawSpec        = {scale = 1.5, shift = {0, -0.75}},
     PipeConnections     = {
@@ -37,7 +37,7 @@ local entity_data = {
     ),
     EntitySprites       = spfunc.create_entity_graphics_and_shadow(entity_name, {
         Scale        = 0.5,
-        Frames       = 4,
+        Frames       =   4,
         EntityWidth  = 640,
         EntityHeight = 640,
         EntityShift  = {0, 0},

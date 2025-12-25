@@ -37,7 +37,7 @@ local entity_data = {
     ),
     EntitySprites       = spfunc.create_entity_graphics_and_shadow(entity_name, {
         Scale        = 0.5,
-        Frames       = 1,
+        Frames       =   1,
         EntityWidth  =  64,
         EntityHeight = 192,
         EntityShift  = {0, -1},

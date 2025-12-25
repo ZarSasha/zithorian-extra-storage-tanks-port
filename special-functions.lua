@@ -278,11 +278,11 @@ special_functions.create_recipe = function(EntityName, Info)
         enabled = false,
         energy_required = EnergyNeed,
         ingredients = {
-            {type = "item", name = "iron-plate",  amount =  IronPlates},
+            {type = "item", name = "iron-plate",  amount = IronPlates },
             {type = "item", name = "steel-plate", amount = SteelPlates}
         },
         results = {
-            {type = "item", name = EntityName, amount = 1}
+            {type = "item", name = EntityName,    amount = 1}
         }
     }
 end
