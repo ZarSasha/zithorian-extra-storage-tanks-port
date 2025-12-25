@@ -23,10 +23,13 @@ Date: 2025-12-25
       - Darkened upper and right window border, and in particular upper corners (they were clearly
         too bright when tank was filled with steam).
     - 2x2 storage tank:
-      - Made window bounding box one pixel taller so fluid/gas visually fills out window properly.
+      - Extended window bounding box one pixel up and down, so fluid/gas visually fills out window
+        properly on all orientations.
+      - Slimmed black edge near lower window border on one orientation for consistency.
     - 3x4 storage tank:
       - Fixed window bounding box offset near top on three of four orientations.
       - Made pixels near right window border completely opaque, to ensure perfect borders.
+      - Removed some excess pixels.
     - 5x5 storage tank:
       - Fixed window bounding box size (not noticable).
   Info:
