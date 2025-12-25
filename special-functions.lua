@@ -159,7 +159,7 @@ local function create_gas_flow_sprite(Info)
         axially_symmetrical = false,
         animation_speed     = 0.25,
         direction_count     = 1,
-        scale               = 0.6 * Info.Scale
+        scale               = 0.5 * Info.Scale
     }
 end
 
@@ -217,7 +217,7 @@ special_functions.create_entity = function(EntityName, Info)
                 Scale           = Info.FluidFlowScale
             }),
             gas_flow          = create_gas_flow_sprite({
-                Scale           = Info.FluidFlowScale
+                Scale           = Info.FluidScale
             })
         },
         flow_length_in_ticks = Info.FluidFlowLength,
