@@ -153,8 +153,8 @@ local function create_gas_flow_sprite(Info)
         filename            = GRAPHICS_PATH .. "steam-narrowed-cropped.png",
         priority            = "extra-high",
         line_length         = 10,
-        width               = 24,
-        height              = 28,
+        width               = 24, -- compressed to half
+        height              = 28, -- trimmed 2 pixels
         frame_count         = 60,
         axially_symmetrical = false,
         animation_speed     = 0.25,

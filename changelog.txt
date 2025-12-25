@@ -15,7 +15,7 @@ Date: 2025-12-25
     - Compatibility: The 'no-rotation' script for the 3x4 storage tank now also applies to any
       clones (with similar names, of course), like those from the mod "Color Coded Pipes".
   Graphics:
-    - Created custom variant of steam gas flow animation sprite mostly to eliminate stretched
+    - Created custom variant of steam gas flow animation sprite to reduce stretching and eliminate
       shadow banding near top of window, especially for the 3x4 storage tank.
   Info:
     - Improved or simplified descriptions of storage tanks and settings.
