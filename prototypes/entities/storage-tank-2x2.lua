@@ -70,8 +70,8 @@ local explosion_data = { -- used by entity
     DebrisSpeedX    = 0.9
 }
 local remnants_data = { -- used by entity
-    Radius          = 1,
-    Shift           = {17, 12}
+    TileRadius      = 1,
+    PixelShift      = {17, 12}
 }
 local item_data = {
     SoundSizeCat    = "large",
