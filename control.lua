@@ -10,7 +10,7 @@
 -- side lengths. This script prevents rotation without making problematic changes to the prototype
 -- itself, which has multiple orientations hard-coded.
 
-local function disable_rotation_of_entity(event)
+local function disable_rotation_of_3x4_storage_tank(event)
     if string.find(event.entity.name, "zith-storage-tank-3x4", 1, true) then
         local reverseRotation =
             (event.previous_direction == defines.direction.north and
@@ -25,7 +25,7 @@ local function disable_rotation_of_entity(event)
     end
 end
 
-script.on_event(defines.events.on_player_rotated_entity, disable_rotation_of_entity)
+script.on_event(defines.events.on_player_rotated_entity, disable_rotation_of_3x4_storage_tank)
 
 ---------------------------------------------------------------------------------------------------
 -- END NOTES
