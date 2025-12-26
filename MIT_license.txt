@@ -1,4 +1,4 @@
-ALL FILES ARE LICENSED AS MIT License
+ALL FILES ARE LICENSED AS MIT LICENSE
 ----------------------------------------------------------------------------
 Copyright (c) 2025 ZarSasha
 Copyright (c) 2024 Zithorian
