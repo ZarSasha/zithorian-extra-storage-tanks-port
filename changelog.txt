@@ -3,11 +3,11 @@ Version: 1.1.0
 Date: 2025-12-26
   Changes:
     - IMPORTANT: Changed name ID's of entities and settings for the sake of consistency, to make
-      them internally easier to work with and to make them more unique. This may affect other mods
-      (such as "Color Coded Pipes"). Added migrations to at least preserve all built entities, but
-      settings must be manually updated, if they were ever changed.
+      them internally easier to work with and to make them more unique. This may affect other mods.
+      Added migrations to at least preserve all built entities, but settings must be manually
+      updated, if they were ever changed.
     - IMPORTANT: Rearranged graphics assets for 3x4 storage tank and greatly simplified code that
-      references it. This may affect other mods (such as "Color Coded Pipes").
+      references it. This may affect other mods.
     - Moved code for unlocking technology from second to first prototype stage.
   Balancing:
     - Generally lowered the time it takes to craft the storage tanks.
@@ -20,17 +20,17 @@ Date: 2025-12-26
     - 1x1 storage tank:
       - Reduced window bounding box height by several pixels to ensure that fluid/gas content is
         displayed in a manner consistent with the rest of the storage tanks.
-      - Darkened upper and right window border, and in particular upper corners (they were clearly
+      - Darkened upper and right window border and in particular upper corners (they were clearly
         too bright when tank was filled with steam).
     - 2x2 storage tank:
-      - Extended window bounding box one pixel up and down, so fluid/gas visually fills out window
+      - Extended window bounding box one pixel up and down so fluid/gas visually fills out window
         properly on all orientations.
       - Slimmed black edge near lower window border on one orientation for consistency.
       - Darkened all window borders a bit, except the bottom one.
     - 3x4 storage tank:
       - Fixed window bounding box offset near top on three of four orientations.
-      - Made pixels near right window border completely opaque, to ensure perfect borders.
-      - Removed some excess pixels on right side.
+      - Made pixels near right window border completely opaque to ensure perfect borders.
+      - Removed some excess pixels on the right side.
     - 5x5 storage tank:
       - Fixed window bounding box size for the sake of tidiness (not noticable).
   Info:
