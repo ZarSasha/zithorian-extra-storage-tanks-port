@@ -87,9 +87,8 @@ local recipe_data = {
 }
 if mods["Krastorio2"] then
     recipe_data.Ingredients = {
-        {type = "item", name = "iron-plate",    amount =  6},
-        {type = "item", name = "kr-iron-beam",  amount =  3},
-        {type = "item", name = "pipe",          amount =  2}
+        {type = "item", name = "iron-plate",    amount =  8},
+        {type = "item", name = "kr-iron-beam",  amount =  3}
     }
 end
 
