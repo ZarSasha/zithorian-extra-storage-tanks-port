@@ -7,6 +7,10 @@ Date: 2026-08-07
       them into different tech stages.
     - Compatibility for Space Exploration: Added property that makes the storage tanks buildable in
       space.
+  Balancing:
+    - Adjusted ratio of iron and steel for the 1x1 and 2x2 storage tanks.
+  Info:
+    - Updated mod title and description.
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.0
 Date: 2026-07-08

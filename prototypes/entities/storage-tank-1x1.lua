@@ -81,7 +81,7 @@ local item_data = {
 local recipe_data = {
     EnergyNeed      = 1.0,
     Ingredients     = {
-        {type = "item", name = "iron-plate",    amount =  5},
+        {type = "item", name = "iron-plate",    amount =  4},
         {type = "item", name = "steel-plate",   amount =  1}
     }
 }
