@@ -13,8 +13,8 @@ require "shared"
 local fluid_handling_tech = data.raw["technology"]["fluid-handling"]
 if fluid_handling_tech == nil then log("fluid-handling tech missing!") return end
 
-local function add(TechName, RecipeName, Order) -- last one can be ignored
-    table.insert(TechName.effects, Order, {type = "unlock-recipe", recipe = RecipeName})
+local function add(TechName, RecipeName, Order)
+    table.insert(TechName.effects, Order or -1, {type = "unlock-recipe", recipe = RecipeName})
 end
 
 if mods["Krastorio2"] then
