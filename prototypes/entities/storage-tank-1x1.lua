@@ -81,14 +81,15 @@ local item_data = {
 local recipe_data = {
     EnergyNeed      = 1.0,
     Ingredients     = {
-        {type = "item", name = "iron-plate",    amount =  4},
+        {type = "item", name = "iron-plate",    amount =  5}, -- SUM: 10 iron plates
         {type = "item", name = "steel-plate",   amount =  1}
     }
 }
 if mods["Krastorio2"] then
     recipe_data.Ingredients = {
-        {type = "item", name = "iron-plate",    amount =  4},
+        {type = "item", name = "iron-plate",    amount =  3}, -- SUM: 5 iron plates (scaling 1)
         {type = "item", name = "kr-iron-beam",  amount =  1}
+        --
     }
 end
 
