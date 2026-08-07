@@ -75,14 +75,22 @@ local remnants_data = { -- used by entity
 }
 local item_data = {
     SoundSizeCat    = "large",
-    StackSize       =  20,
-    Weight          =  50
+    StackSize       = 20,
+    Weight          = 50
 }
 local recipe_data = {
     EnergyNeed      = 5.0,
-    IronPlates      =  24,
-    SteelPlates     =  12
+    IronPlates      = 24,
+    SteelPlates     = 12
 }
+
+if mods["Krastorio2"] then recipe_data = {
+    SizeCategory    = "large",
+    EnergyNeed      = 5.0,
+    SteelPlates     = 30,
+    K2_SteelBeams   = 12,
+    K2_SteelPipes   = 4
+} end
 
 ---------------------------------------------------------------------------------------------------
 -- FINAL DATA WRITE --

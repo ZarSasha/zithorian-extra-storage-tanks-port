@@ -1,7 +1,7 @@
 ---------------------------------------------------------------------------------------------------
 --  ┏┓┳┳┳┓┏┓┏┳┓┳┏┓┳┓┏┓
 --  ┣ ┃┃┃┃┃  ┃ ┃┃┃┃┃┗┓
---  ┻ ┗┛┛┗┗┛ ┻ ┻┗┛┛┗┗┛                                            
+--  ┻ ┗┛┛┗┗┛ ┻ ┻┗┛┛┗┗┛
 ---------------------------------------------------------------------------------------------------
 require "util"
 require "shared"
@@ -239,6 +239,9 @@ special_functions.create_entity = function(EntityName, Info)
     }
     -- COMPATIBILITY for Space Age DLC: Adds heating requirement on Aquilo.
     if SPACE_AGE.IsPresent then entity.heating_energy = Info.HeatingEnergy end
+    -- Space Exploration: Allows entity to be build in space.
+    if mods["space-exploration"] then storageTank.se_allow_in_space = true end
+
     return entity
 end
 
@@ -272,7 +275,8 @@ special_functions.create_recipe = function(EntityName, Info)
     local EnergyNeed  = Info.EnergyNeed  -- number
     local IronPlates  = Info.IronPlates  -- number
     local SteelPlates = Info.SteelPlates -- number
-    return {
+
+    local output = {
         type = "recipe",
         name = EntityName,
         enabled = false,
@@ -285,6 +289,31 @@ special_functions.create_recipe = function(EntityName, Info)
             {type = "item", name = EntityName,    amount = 1}
         }
     }
+
+    -- Krastorio 2:
+    local SizeCategory  = Info.SizeCategory
+    local K2_IronBeams  = Info.K2_IronBeams
+    local K2_SteelBeams = Info.K2_SteelBeams
+    local K2_SteelPipes = Info.K2_SteelPipes
+
+    if not mods["Krastorio2"] then goto continue end
+
+    if SizeCategory == "small" then
+        output.ingredients = {
+            {type = "item", name = "iron-plate",    amount = IronPlates   },
+            {type = "item", name = "kr-iron-beam",  amount = K2_IronBeams },
+            {type = "item", name = "pipe",          amount = Pipes        }
+        }
+    elseif SizeCategory == "large" then
+        output.ingredients = {
+            {type = "item", name = "steel-plate",   amount = SteelPlates  },
+            {type = "item", name = "kr-steel-beam", amount = K2_SteelBeams},
+            {type = "item", name = "kr-steel-pipe", amount = K2_SteelPipes}
+        }
+    end
+
+    ::continue::
+    return output
 end
 
 ---------------------------------------------------------------------------------------------------
