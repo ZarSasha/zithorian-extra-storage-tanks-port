@@ -2,7 +2,7 @@
 -- MIGRATION SCRIPT FOR V1.2.1
 ---------------------------------------------------------------------------------------------------
 
-game.print("[color=acid]Extra Storage Tanks: Tiny Storage Tanks[/color]")
-game.print("  v1.5.1: Recipe for the storage tanks was changed!")
+game.print("[color=acid]Zithorian's Extra Storage Tanks for 2.0+[/color]")
+game.print("  v1.2.1: Recipes for the smaller storage tanks were adjusted!")
 
 ---------------------------------------------------------------------------------------------------
