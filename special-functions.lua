@@ -258,7 +258,7 @@ special_functions.create_item = function(EntityName, Info)
         icon = ICON_PATH .. EntityName .. ".png",
         icon_size = 64, icon_mipmaps = 4, -- remove mipmaps
         subgroup = "storage",
-        order = "bc",
+        order = "b[fluild]-a[storage-tanks]-[zith]",
         inventory_move_sound = item_sounds["metal-"..SoundSizeCat.."-inventory_move"],
         pick_sound = item_sounds["metal-"..SoundSizeCat.."-inventory_pickup"],
         drop_sound = item_sounds["metal-"..SoundSizeCat.."-inventory_move"],
