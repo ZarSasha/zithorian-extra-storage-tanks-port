@@ -3,8 +3,8 @@ Version: 1.2.1
 Date: 2026-08-07
   Changes:
     - Compatibility for Krastorio 2: Accurately scaled cost of recipes to fit in, using different
-      materials for storage tanks smaller and larger than the standard one. TODO: Also separated
-      them into different tech stages.
+      materials for storage tanks smaller and larger than the standard one. Also split them up so
+      they unlock at different tech stages.
     - Compatibility for Space Exploration: Added property that makes the storage tanks buildable in
       space.
   Balancing:
