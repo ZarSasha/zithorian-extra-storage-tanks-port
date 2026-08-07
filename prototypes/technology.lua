@@ -28,7 +28,7 @@ if mods["Krastorio2"] then
     local steel_fluid_tank_tech = data.raw["technology"]["kr-steel-fluid-tanks"]
     if steel_fluid_tank_tech == nil then log("kr-steel-fluid-tanks tech missing!") return end
     for _, variant in pairs({"2x2","1x1"}) do
-        add_at_start(fluid_handling_tech, 1, STORAGE_TANK_NAME[variant])
+        add_at_start(fluid_handling_tech, STORAGE_TANK_NAME[variant])
     end
     for _, variant in pairs({"3x4","5x5"}) do
         add_at_end(steel_fluid_tank_tech, STORAGE_TANK_NAME[variant])
