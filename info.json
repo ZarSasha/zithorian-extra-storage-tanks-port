@@ -7,7 +7,7 @@
   "license": "MIT",
   "description": "Adds 4 storage tanks, all of them designed to look similar to their vanilla counterpart. A Factorio 2.0 port of the mod \"Zithorian's Extra Storage Tanks\" by Zithorian.",
   "dependencies": [
-    "base >= 2.1.7",
+    "base",
     "? space-age",
     "? Krastorio2",
     "? space-exploration"

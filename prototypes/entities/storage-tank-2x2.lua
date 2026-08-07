@@ -80,17 +80,18 @@ local item_data = {
 }
 local recipe_data = {
     EnergyNeed      = 2.0,
-    IronPlates      = 15,
-    SteelPlates     = 2
+    Ingredients     = {
+        {type = "item", name = "iron-plate",    amount = 15},
+        {type = "item", name = "steel-plate",   amount =  2}
+    }
 }
-
-if mods["Krastorio2"] then recipe_data = {
-    SizeCategory    = "small",
-    EnergyNeed      = 2.0,
-    IronPlates      = 6,
-    K2_IronBeams    = 3,
-    Pipes           = 2
-} end
+if mods["Krastorio2"] then
+    recipe_data.Ingredients = {
+        {type = "item", name = "iron-plate",    amount =  6},
+        {type = "item", name = "kr-iron-beam",  amount =  3},
+        {type = "item", name = "pipe",          amount =  2}
+    }
+end
 
 ---------------------------------------------------------------------------------------------------
 -- FINAL DATA WRITE --

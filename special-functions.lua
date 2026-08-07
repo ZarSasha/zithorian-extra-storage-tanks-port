@@ -273,46 +273,17 @@ end
 ---------------------------------------------------------------------------------------------------
 special_functions.create_recipe = function(EntityName, Info)
     local EnergyNeed  = Info.EnergyNeed  -- number
-    local IronPlates  = Info.IronPlates  -- number
-    local SteelPlates = Info.SteelPlates -- number
-
-    local output = {
+    local Ingredients = Info.Ingredients -- table of tables
+    return {
         type = "recipe",
         name = EntityName,
         enabled = false,
         energy_required = EnergyNeed,
-        ingredients = {
-            {type = "item", name = "iron-plate",  amount = IronPlates },
-            {type = "item", name = "steel-plate", amount = SteelPlates}
-        },
+        ingredients = Ingredients,
         results = {
             {type = "item", name = EntityName,    amount = 1}
         }
     }
-
-    -- Krastorio 2:
-    local SizeCategory  = Info.SizeCategory  -- string
-    local K2_IronBeams  = Info.K2_IronBeams  -- number
-    local K2_SteelBeams = Info.K2_SteelBeams -- number
-    local K2_SteelPipes = Info.K2_SteelPipes -- number
-
-    if mods["Krastorio2"] then
-        if SizeCategory == "small" then
-            output.ingredients = {
-                {type = "item", name = "iron-plate",    amount = IronPlates   },
-                {type = "item", name = "kr-iron-beam",  amount = K2_IronBeams },
-                {type = "item", name = "pipe",          amount = Pipes        }
-            }
-        elseif SizeCategory == "large" then
-            output.ingredients = {
-                {type = "item", name = "steel-plate",   amount = SteelPlates  },
-                {type = "item", name = "kr-steel-beam", amount = K2_SteelBeams},
-                {type = "item", name = "kr-steel-pipe", amount = K2_SteelPipes}
-            }
-        end
-    end
-
-    return output
 end
 
 ---------------------------------------------------------------------------------------------------
