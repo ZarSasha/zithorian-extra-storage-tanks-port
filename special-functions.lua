@@ -291,28 +291,27 @@ special_functions.create_recipe = function(EntityName, Info)
     }
 
     -- Krastorio 2:
-    local SizeCategory  = Info.SizeCategory
-    local K2_IronBeams  = Info.K2_IronBeams
-    local K2_SteelBeams = Info.K2_SteelBeams
-    local K2_SteelPipes = Info.K2_SteelPipes
+    local SizeCategory  = Info.SizeCategory  -- string
+    local K2_IronBeams  = Info.K2_IronBeams  -- number
+    local K2_SteelBeams = Info.K2_SteelBeams -- number
+    local K2_SteelPipes = Info.K2_SteelPipes -- number
 
-    if not mods["Krastorio2"] then goto continue end
-
-    if SizeCategory == "small" then
-        output.ingredients = {
-            {type = "item", name = "iron-plate",    amount = IronPlates   },
-            {type = "item", name = "kr-iron-beam",  amount = K2_IronBeams },
-            {type = "item", name = "pipe",          amount = Pipes        }
-        }
-    elseif SizeCategory == "large" then
-        output.ingredients = {
-            {type = "item", name = "steel-plate",   amount = SteelPlates  },
-            {type = "item", name = "kr-steel-beam", amount = K2_SteelBeams},
-            {type = "item", name = "kr-steel-pipe", amount = K2_SteelPipes}
-        }
+    if mods["Krastorio2"] then
+        if SizeCategory == "small" then
+            output.ingredients = {
+                {type = "item", name = "iron-plate",    amount = IronPlates   },
+                {type = "item", name = "kr-iron-beam",  amount = K2_IronBeams },
+                {type = "item", name = "pipe",          amount = Pipes        }
+            }
+        elseif SizeCategory == "large" then
+            output.ingredients = {
+                {type = "item", name = "steel-plate",   amount = SteelPlates  },
+                {type = "item", name = "kr-steel-beam", amount = K2_SteelBeams},
+                {type = "item", name = "kr-steel-pipe", amount = K2_SteelPipes}
+            }
+        end
     end
 
-    ::continue::
     return output
 end
 
