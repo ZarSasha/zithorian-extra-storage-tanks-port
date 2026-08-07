@@ -24,7 +24,7 @@ if mods["Krastorio2"] then
         add(fluid_handling_tech, STORAGE_TANK_NAME[variant])
     end
     for _, variant in pairs({"3x4","5x5"}) do
-        add(steel_fluid_handling_tech, STORAGE_TANK_NAME[variant])
+        add(steel_fluid_tank_tech, STORAGE_TANK_NAME[variant])
     end
 -- Default:
 else
