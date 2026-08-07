@@ -12,6 +12,7 @@ Date: 2026-08-07
     - Adjusted ratio of iron and steel for the 1x1 and 2x2 storage tanks.
   Info:
     - Updated mod title and description.
+    - Added migration script warning about the recipe change.
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.0
 Date: 2026-07-08
