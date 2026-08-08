@@ -27,31 +27,31 @@ steel beams compared to steel plates also tend to decrease a bit with size.
 So by default, the cost of each storage tank should roughly be:
 
   Vanilla:
-    Storage tank       ( 25k capacity):   45 iron plates (default)
+    Storage tank       ( 25k):   45 iron plates (default)
 
   Zithorian:
-    1x1 storage tank   (  3k capacity):  ~10 iron plates
-    2x2 storage tank   ( 12k capacity):  ~27 iron plates
-    3x4 storage tank   ( 72k capacity):  ~95 iron plates
-    5x5 storage tank   (150k capacity): ~160 iron plates
+    1x1 storage tank   (  3k):  ~10 iron plates
+    2x2 storage tank   ( 12k):  ~27 iron plates
+    3x4 storage tank   ( 72k):  ~95 iron plates
+    5x5 storage tank   (150k): ~160 iron plates
 
   Extra Storage Tanks:
-    Tiny storage tanks (2.7k capacity):  ~10 iron plates
-    Steel storage tank (125k capacity): ~141 iron plates
+    Tiny storage tanks (2.7k):  ~10 iron plates
+    Steel storage tank (125k): ~141 iron plates
 
 With Krastorio 2 installed, they should instead be:
 
   Vanilla:
-    Storage tank       ( 25k capacity):   20 iron plates (small)
+    Storage tank       ( 25k):   20 iron plates (small)
 
   Zithorian:
-    1x1 storage tank   (  3k capacity):   ~5 iron plates (small)
-    2x2 storage tank   ( 12k capacity):  ~12 iron plates (small)
-    3x4 storage tank   ( 72k capacity): ~109 iron plates (large)
-    5x5 storage tank   (150k capacity): ~183 iron plates (large)
+    1x1 storage tank   (  3k):   ~5 iron plates (small)
+    2x2 storage tank   ( 12k):  ~12 iron plates (small)
+    3x4 storage tank   ( 72k): ~109 iron plates (large)
+    5x5 storage tank   (150k): ~183 iron plates (large)
 
   Extra Storage Tanks:
-    Tiny storage tanks (2.7k capacity): ~4.5 iron plates (small)
-    Steel storage tank (125k capacity): ~161 iron plates (large)
+    Tiny storage tanks (2.7k): ~4.5 iron plates (small)
+    Steel storage tank (125k): ~161 iron plates (large)
 
 I end up using values which are the same, or are very close to, the above.

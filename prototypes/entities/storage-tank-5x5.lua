@@ -79,7 +79,7 @@ local item_data = {
     Weight          = 100
 }
 local recipe_data = {
-    EnergyNeed      = 7.5,
+    EnergyNeed      = 8.0,
     Ingredients     = {
         {type = "item", name = "iron-plate",    amount = 35}, -- SUM: 160 iron plates
         {type = "item", name = "steel-plate",   amount = 25}  -- Ratio: 1.4 iron to steel

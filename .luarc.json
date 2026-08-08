@@ -1,0 +1,18 @@
+{
+    "diagnostics.globals": [
+        "defines",
+        "script",
+        "game",
+        "mods",
+        "data",
+        "log",
+        "util",
+        "circuit_connector_definitions",
+        "universal_connector_template",
+        "settings",
+        "default_circuit_wire_max_distance",
+        "kg",
+        "make_rotated_animation_variations_from_sheet",
+        "pipecoverspictures"
+    ]
+}
