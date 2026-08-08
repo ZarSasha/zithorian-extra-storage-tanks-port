@@ -4,7 +4,7 @@ NOTES ON SCALING OF RECIPE COST (last modified 2026-08-08)
 Recipe cost has been harmonized among several mods that I maintain, which are:
 
   Zithorian's Extra Storage Tanks For 2.0+ (v1.2.1+)
-  Extra Storage Tanks: Tiny Storage tanks  (v1.5.1+)
+  Extra Storage Tanks: Tiny Storage tanks  (v1.6.0+)
   Extra Storage Tanks: Steel Storage tanks (v1.3.0+)
 
 They are also adapted to match the steel storage tanks from Krastorio 2, if that mod is installed.
@@ -30,7 +30,7 @@ So by default, the cost of each storage tank should roughly be:
 
   Zithorian:
     1x1 storage tank   (  3k capacity):  ~10 iron plates
-    2x2 storage tank   (  3k capacity):  ~27 iron plates
+    2x2 storage tank   ( 12k capacity):  ~27 iron plates
     3x4 storage tank   ( 72k capacity):  ~95 iron plates
     5x5 storage tank   (150k capacity): ~160 iron plates
 
@@ -45,7 +45,7 @@ With Krastorio 2 installed, they should instead be:
 
   Zithorian:
     1x1 storage tank   (  3k capacity):   ~5 iron plates (scaling 1)
-    2x2 storage tank   (  3k capacity):  ~12 iron plates (scaling 1)
+    2x2 storage tank   ( 12k capacity):  ~12 iron plates (scaling 1)
     3x4 storage tank   ( 72k capacity): ~109 iron plates (scaling 2)
     5x5 storage tank   (150k capacity): ~183 iron plates (scaling 2)
 
