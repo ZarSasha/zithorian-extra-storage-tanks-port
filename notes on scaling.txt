@@ -53,4 +53,4 @@ With Krastorio 2 installed, they should instead be:
     Tiny storage tanks (2.7k capacity):   ~5 iron plates (small)
     Steel storage tank (125k capacity): ~161 iron plates (large)
 
-I generally end up with using values which are the same, or are very close to, the above.
+I end up with using values which are the same, or are very close to, the above.
