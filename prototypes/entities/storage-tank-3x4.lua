@@ -85,7 +85,7 @@ local recipe_data = {
         {type = "item", name = "steel-plate",   amount = 15}  -- Ratio: 1.4 iron to steel
     }
 }
-if mods["Krastorio2"] then
+if KRASTORIO_2.IsPresent then
     recipe_data.Ingredients = {
         {type = "item", name = "steel-plate",   amount = 28}, -- SUM: 112 iron plates (scaling 2)
         {type = "item", name = "kr-steel-beam", amount = 12},

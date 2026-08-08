@@ -240,7 +240,7 @@ special_functions.create_entity = function(EntityName, Info)
     -- COMPATIBILITY for Space Age DLC: Adds heating requirement on Aquilo.
     if SPACE_AGE.IsPresent then entity.heating_energy = Info.HeatingEnergy end
     -- Space Exploration: Allows entity to be build in space.
-    if mods["space-exploration"] then entity.se_allow_in_space = true end
+    if SPACE_EXPLORATION.IsPresent then entity.se_allow_in_space = true end
 
     return entity
 end

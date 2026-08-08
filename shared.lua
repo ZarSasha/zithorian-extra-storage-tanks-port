@@ -18,8 +18,9 @@ STORAGE_TANK_NAME = {
     ["5x5"] = "zith-storage-tank-5x5"
 }
 
-SPACE_AGE = { IsPresent = mods["space-age"] }
-
+SPACE_AGE         = { IsPresent = mods["space-age"] }
+KRASTORIO_2       = { IsPresent = mods["Krastorio2"] }
+SPACE_EXPLORATION = { IsPresent = mods["space-exploration"] }
 ---------------------------------------------------------------------------------------------------
 -- END NOTES
 ---------------------------------------------------------------------------------------------------

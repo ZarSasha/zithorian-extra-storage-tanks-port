@@ -24,7 +24,7 @@ end
 -- Yes, I made two functions because Lua is just really inflexible with its table.insert function!
 
 -- Krastorio 2:
-if mods["Krastorio2"] then
+if KRASTORIO_2.IsPresent then
     local steel_fluid_tank_tech = data.raw["technology"]["kr-steel-fluid-tanks"]
     if steel_fluid_tank_tech == nil then log("kr-steel-fluid-tanks tech missing!") return end
     for _, variant in pairs({"2x2","1x1"}) do
