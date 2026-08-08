@@ -13,8 +13,8 @@ By default, the ingredient cost will be roughly scaled according to this formula
 
   All storage tanks: (Iron plate cost) = 4.6224 * (1k units of capacity) ^ (0.707),
 
-where the last number is the inverse square root of 2. The required proportion of steel compared
-to iron also tend to increase with storage capacity.
+where the last number is the inverse square root of 2 (so relative cost gradually decreases with
+size). The required proportion of steel compared to iron intentionally increases as well.
 
 With Krastorio 2 installed, small and large storage tanks are scaled according to these formulas:
 
@@ -22,7 +22,7 @@ With Krastorio 2 installed, small and large storage tanks are scaled according t
   Large storage tanks: (Iron plate cost) = 6.3    * (1k units of capacity) ^ (0.674),
 
 where the parameters of the last formula is obtained through regression. The required proportion of
-steel beams compared to steel plates also tend to decrease a bit.
+steel beams compared to steel plates also tend to decrease a bit with size.
 
 So by default, the cost of each storage tank should roughly be:
 
@@ -51,7 +51,7 @@ With Krastorio 2 installed, they should instead be:
     5x5 storage tank   (150k capacity): ~183 iron plates (large)
 
   Extra Storage Tanks:
-    Tiny storage tanks (2.7k capacity):   ~5 iron plates (small)
+    Tiny storage tanks (2.7k capacity): ~4.5 iron plates (small)
     Steel storage tank (125k capacity): ~161 iron plates (large)
 
 I end up using values which are the same, or are very close to, the above.
