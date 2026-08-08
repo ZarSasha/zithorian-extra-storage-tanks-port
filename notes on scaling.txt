@@ -1,0 +1,56 @@
+---------------------------------------------------------------------------------------------------
+NOTES ON SCALING OF RECIPE COST (last modified 2026-08-08)
+---------------------------------------------------------------------------------------------------
+Recipe cost has been harmonized among several mods that I maintain, which are:
+
+  Zithorian's Extra Storage Tanks For 2.0+ (v1.2.1+)
+  Extra Storage Tanks: Tiny Storage tanks  (v1.5.1+)
+  Extra Storage Tanks: Steel Storage tanks (v1.3.0+)
+
+They are also adapted to match the steel storage tanks from Krastorio 2, if that mod is installed.
+
+By default, the ingredient cost will be roughly scaled according to this formular:
+
+  All storage tanks: (Iron plate cost) = 4.6224 * (1k units of capacity) ^ (0.707),
+
+where the last number is the inverse square root of 2. The required proportion of steel also tend
+to increase with storage capacity.
+
+With Krastorio 2 installed, small and large storage tanks are scaled according to these formulas:
+
+  Small storage tanks: (Iron plate cost) = 2.0544 * (1k units of capacity) ^ (0.707),
+  Large storage tanks: (Iron plate cost) = 6.3    * (1k units of capacity) ^ (0.674),
+
+where the parameters of the last formula is obtained through regression.
+
+So by default, the cost of each storage tank should roughly be:
+
+  Vanilla:
+    Storage tank       ( 25k capacity):   45 iron plates (default)
+
+  Zithorian:
+    1x1 storage tank   (  3k capacity):  ~10 iron plates
+    2x2 storage tank   (  3k capacity):  ~27 iron plates
+    3x4 storage tank   ( 72k capacity):  ~95 iron plates
+    5x5 storage tank   (150k capacity): ~160 iron plates
+
+  Extra Storage Tanks:
+    Tiny storage tanks (2.7k capacity):  ~10 iron plates
+    Steel storage tank (125k capacity): ~141 iron plates
+
+With Krastorio 2 installed, they should instead be:
+
+  Vanilla:
+    Storage tank       ( 25k capacity):   20 iron plates (default)
+
+  Zithorian:
+    1x1 storage tank   (  3k capacity):   ~5 iron plates (scaling 1)
+    2x2 storage tank   (  3k capacity):  ~12 iron plates (scaling 1)
+    3x4 storage tank   ( 72k capacity): ~109 iron plates (scaling 2)
+    5x5 storage tank   (150k capacity): ~183 iron plates (scaling 2)
+
+  Extra Storage Tanks:
+    Tiny storage tanks (2.7k capacity):   ~5 iron plates (scaling 1)
+    Steel storage tank (125k capacity): ~161 iron plates (scaling 2)
+
+I generally end up with using values which are the same, or are very close to, the above.
