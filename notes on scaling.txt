@@ -7,14 +7,15 @@ Recipe cost has been harmonized among several mods that I maintain, which are:
   Extra Storage Tanks: Tiny Storage tanks  (v1.6.0+)
   Extra Storage Tanks: Steel Storage tank  (v1.3.0+)
 
-They are also adapted to match the steel storage tanks from Krastorio 2, if that mod is installed.
+It has also been adapted to match the storage tanks in Krastorio 2, if that mod is installed.
 
 By default, the ingredient cost will be roughly scaled according to this formular:
 
   All storage tanks: (Iron plate cost) = 4.6224 * (1k units of capacity) ^ (0.707),
 
-where the last number is the inverse square root of 2 (so relative cost gradually decreases with
-size). The required proportion of steel compared to iron intentionally increases as well.
+where the last number is the inverse square root of 2, which means that the relative cost
+gradually decreases with size. On the other hand, the proportion of steel required intentionally
+increases, but not as accurately.
 
 With Krastorio 2 installed, small and large storage tanks are scaled according to these formulas:
 
@@ -22,7 +23,7 @@ With Krastorio 2 installed, small and large storage tanks are scaled according t
   Large storage tanks: (Iron plate cost) = 6.3    * (1k units of capacity) ^ (0.674),
 
 where the parameters of the last formula is obtained through regression. The required proportion of
-steel beams compared to steel plates also tend to decrease a bit with size.
+steel beams compared to steel plates tends to decrease, to fit the storage tanks of that mod.
 
 So by default, the cost of each storage tank should roughly be:
 
@@ -39,7 +40,7 @@ So by default, the cost of each storage tank should roughly be:
     Tiny storage tanks (2.7k):  ~10 iron plates
     Steel storage tank (125k): ~141 iron plates
 
-With Krastorio 2 installed, they should instead be:
+With Krastorio 2 installed, the cost should instead be:
 
   Vanilla:
     Storage tank       ( 25k):   20 iron plates (small)
