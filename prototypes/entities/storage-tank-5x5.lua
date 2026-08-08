@@ -81,8 +81,8 @@ local item_data = {
 local recipe_data = {
     EnergyNeed      = 7.5,
     Ingredients     = {
-        {type = "item", name = "iron-plate",    amount = 45}, -- SUM: 150 iron plates
-        {type = "item", name = "steel-plate",   amount = 21}
+        {type = "item", name = "iron-plate",    amount = 35}, -- SUM: 160 iron plates
+        {type = "item", name = "steel-plate",   amount = 25}  -- Ratio: 1.4 iron to steel
     }
 }
 if mods["Krastorio2"] then
