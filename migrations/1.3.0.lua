@@ -3,6 +3,6 @@
 ---------------------------------------------------------------------------------------------------
 
 game.print("[color=acid]Zithorian's Extra Storage Tanks for 2.0+[/color]")
-game.print("  v1.3.0: Recipes for the smaller storage tanks were adjusted!")
+game.print("  v1.3.0: Recipes for all storage tanks were adjusted!")
 
 ---------------------------------------------------------------------------------------------------
