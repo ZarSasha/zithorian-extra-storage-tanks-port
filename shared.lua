@@ -10,6 +10,7 @@
 MOD_NAME      = "__zithorian-extra-storage-tanks-port__"
 ICON_PATH     = MOD_NAME .. "/graphics/icons/"
 GRAPHICS_PATH = MOD_NAME .. "/graphics/entities/"
+TECH_PATH     = MOD_NAME .. "/graphics/technology/"
 
 STORAGE_TANK_NAME = {
     ["1x1"] = "zith-storage-tank-1x1",
@@ -21,6 +22,7 @@ STORAGE_TANK_NAME = {
 SPACE_AGE         = { IsPresent = mods["space-age"] }
 KRASTORIO_2       = { IsPresent = mods["Krastorio2"] }
 SPACE_EXPLORATION = { IsPresent = mods["space-exploration"] }
+
 ---------------------------------------------------------------------------------------------------
 -- END NOTES
 ---------------------------------------------------------------------------------------------------
