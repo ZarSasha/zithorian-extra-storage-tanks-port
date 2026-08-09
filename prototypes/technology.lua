@@ -44,7 +44,7 @@ else
         type = "technology",
         name = "zith-storage-tanks",
         icon = TECH_PATH .. "zith-storage-tanks.png",
-        icon_size = 144,
+        icon_size = 256,
         prerequisites = {"fluid-handling"},
         effects = {
             { type = "unlock-recipe", recipe = STORAGE_TANK_NAME["3x4"] },
