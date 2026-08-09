@@ -19,6 +19,7 @@ Date: 2026-08-09
       like the vanilla storage tank.
   Internal:
     - Added a text file explaining how recipe cost was scaled amongst several storage tank mods.
+    - Tidied up a bit.
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.0
 Date: 2026-07-08

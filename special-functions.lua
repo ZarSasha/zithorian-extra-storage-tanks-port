@@ -262,6 +262,7 @@ special_functions.create_item = function(EntityName, Info)
             item_sounds.metal_large_inventory_pickup
         }
     }
+    -- Main table:
     return {
         type = "item",
         name = EntityName,
@@ -284,6 +285,7 @@ end
 special_functions.create_recipe = function(EntityName, Info)
     local EnergyNeed  = Info.EnergyNeed  -- number
     local Ingredients = Info.Ingredients -- table of tables
+    -- Main table:
     return {
         type = "recipe",
         name = EntityName,
@@ -308,7 +310,7 @@ special_functions.create_explosion = function(EntityName, Info)
     local AnimHeight    = Info.AnimHeight or 0  -- number
     local DebrisAmountX = Info.DebrisAmountX    -- number
     local DebrisSpeedX  = Info.DebrisSpeedX     -- number
-
+    -- Dictionaries:
     local sound_sizes   = {
         ["small"]  = sounds.small_explosion,
         ["medium"] = sounds.medium_explosion,
@@ -319,6 +321,7 @@ special_functions.create_explosion = function(EntityName, Info)
         ["medium"] = explosion_animations.medium_explosion(AnimScale),
         ["big"]    = explosion_animations.big_explosion(AnimScale)
     }
+    -- Main table:
     ---@diagnostic disable-next-line: undefined-field
     local explosion = table.deepcopy(data.raw["explosion"]["storage-tank-explosion"])
     explosion.name = EntityName .. "-explosion"
@@ -348,6 +351,7 @@ end
 special_functions.create_remnants = function(EntityName, Info)
     local TileRadius = Info.TileRadius or 1.5    -- number
     local PixelShift = Info.PixelShift or {0, 0} -- number array
+    -- Main table:
     return {
         type = "corpse",
         name = EntityName .. "-remnants",
