@@ -33,7 +33,7 @@ if KRASTORIO_2.IsPresent then
     end
     for _, variant in pairs({"3x4","5x5"}) do
         table.insert(
-            fluid_handling_tech.effects,
+            steel_fluid_tank_tech.effects,
             {type = "unlock-recipe", recipe = STORAGE_TANK_NAME[variant]}
         )
     end
