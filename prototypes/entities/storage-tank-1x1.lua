@@ -75,14 +75,23 @@ local remnants_data = { -- used by entity
 }
 local item_data = {
     SoundSizeCat    = "small",
-    StackSize       =  50,
-    Weight          =  10
+    StackSize       = 50,
+    Weight          = 10
 }
 local recipe_data = {
     EnergyNeed      = 1.0,
-    IronPlates      =   5,
-    SteelPlates     =   1
+    Ingredients     = {
+        {type = "item", name = "iron-plate",    amount =  5}, -- SUM: 10 iron plates
+        {type = "item", name = "steel-plate",   amount =  1}  -- Ratio: 5 iron to steel
+    }
 }
+if KRASTORIO_2.IsPresent then
+    recipe_data.Ingredients = {
+        {type = "item", name = "iron-plate",    amount =  3}, -- SUM: 5 iron plates (scaling 1)
+        {type = "item", name = "kr-iron-beam",  amount =  1}  -- Ratio: 3 plates to beams
+        --
+    }
+end
 
 ---------------------------------------------------------------------------------------------------
 -- FINAL DATA WRITE --

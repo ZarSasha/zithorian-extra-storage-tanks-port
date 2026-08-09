@@ -1,7 +1,7 @@
 ---------------------------------------------------------------------------------------------------
 --  ┏┓┳┳┳┓┏┓┏┳┓┳┏┓┳┓┏┓
 --  ┣ ┃┃┃┃┃  ┃ ┃┃┃┃┃┗┓
---  ┻ ┗┛┛┗┗┛ ┻ ┻┗┛┛┗┗┛                                            
+--  ┻ ┗┛┛┗┗┛ ┻ ┻┗┛┛┗┗┛
 ---------------------------------------------------------------------------------------------------
 require "util"
 require "shared"
@@ -197,8 +197,7 @@ special_functions.create_entity = function(EntityName, Info)
         fluid_box = {
             volume = settings.startup[EntityName.."-volume-setting"].value,
             pipe_covers = pipecoverspictures(),
-            pipe_connections = Info.PipeConnections,
-            hide_connection_Info = true
+            pipe_connections = Info.PipeConnections
         },
         window_bounding_box = Info.WindowBox,
         pictures = {
@@ -239,6 +238,9 @@ special_functions.create_entity = function(EntityName, Info)
     }
     -- COMPATIBILITY for Space Age DLC: Adds heating requirement on Aquilo.
     if SPACE_AGE.IsPresent then entity.heating_energy = Info.HeatingEnergy end
+    -- Space Exploration: Allows entity to be build in space.
+    if SPACE_EXPLORATION.IsPresent then entity.se_allow_in_space = true end
+
     return entity
 end
 
@@ -249,16 +251,28 @@ special_functions.create_item = function(EntityName, Info)
     local SoundSizeCat = Info.SoundSizeCat -- string: "small" or "large"
     local StackSize    = Info.StackSize    -- number
     local Weight       = Info.Weight       -- number
+    -- Dictionary:
+    local sound_sizes = {
+        ["small"] = {
+            item_sounds.metal_small_inventory_move,
+            item_sounds.metal_small_inventory_pickup
+        },
+        ["large"] = {
+            item_sounds.metal_large_inventory_move,
+            item_sounds.metal_large_inventory_pickup
+        }
+    }
+    -- Main table:
     return {
         type = "item",
         name = EntityName,
         icon = ICON_PATH .. EntityName .. ".png",
         icon_size = 64, icon_mipmaps = 4, -- remove mipmaps
         subgroup = "storage",
-        order = "bc",
-        inventory_move_sound = item_sounds["metal-"..SoundSizeCat.."-inventory_move"],
-        pick_sound = item_sounds["metal-"..SoundSizeCat.."-inventory_pickup"],
-        drop_sound = item_sounds["metal-"..SoundSizeCat.."-inventory_move"],
+        order = "b[fluild]-a[storage-tanks]-[zith]",
+        inventory_move_sound = sound_sizes[SoundSizeCat][1],
+        pick_sound = sound_sizes[SoundSizeCat][2],
+        drop_sound = sound_sizes[SoundSizeCat][1],
         place_result = EntityName,
         stack_size = StackSize,
         weight = Weight*kg
@@ -270,17 +284,14 @@ end
 ---------------------------------------------------------------------------------------------------
 special_functions.create_recipe = function(EntityName, Info)
     local EnergyNeed  = Info.EnergyNeed  -- number
-    local IronPlates  = Info.IronPlates  -- number
-    local SteelPlates = Info.SteelPlates -- number
+    local Ingredients = Info.Ingredients -- table of tables
+    -- Main table:
     return {
         type = "recipe",
         name = EntityName,
         enabled = false,
         energy_required = EnergyNeed,
-        ingredients = {
-            {type = "item", name = "iron-plate",  amount = IronPlates },
-            {type = "item", name = "steel-plate", amount = SteelPlates}
-        },
+        ingredients = Ingredients,
         results = {
             {type = "item", name = EntityName,    amount = 1}
         }
@@ -299,7 +310,7 @@ special_functions.create_explosion = function(EntityName, Info)
     local AnimHeight    = Info.AnimHeight or 0  -- number
     local DebrisAmountX = Info.DebrisAmountX    -- number
     local DebrisSpeedX  = Info.DebrisSpeedX     -- number
-
+    -- Dictionaries:
     local sound_sizes   = {
         ["small"]  = sounds.small_explosion,
         ["medium"] = sounds.medium_explosion,
@@ -310,6 +321,7 @@ special_functions.create_explosion = function(EntityName, Info)
         ["medium"] = explosion_animations.medium_explosion(AnimScale),
         ["big"]    = explosion_animations.big_explosion(AnimScale)
     }
+    -- Main table:
     ---@diagnostic disable-next-line: undefined-field
     local explosion = table.deepcopy(data.raw["explosion"]["storage-tank-explosion"])
     explosion.name = EntityName .. "-explosion"
@@ -339,6 +351,7 @@ end
 special_functions.create_remnants = function(EntityName, Info)
     local TileRadius = Info.TileRadius or 1.5    -- number
     local PixelShift = Info.PixelShift or {0, 0} -- number array
+    -- Main table:
     return {
         type = "corpse",
         name = EntityName .. "-remnants",
