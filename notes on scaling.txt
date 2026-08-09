@@ -27,8 +27,8 @@ steel beams compared to steel plates tends to decrease, to fit the storage tanks
 
 So by default, the cost of each storage tank should roughly be:
 
-  Vanilla:
-    Storage tank       ( 25k):   45 iron plates (default)
+  Vanilla (reference):
+    Storage tank       ( 25k):   45 iron plates
 
   Zithorian:
     1x1 storage tank   (  3k):  ~10 iron plates
@@ -42,8 +42,12 @@ So by default, the cost of each storage tank should roughly be:
 
 With Krastorio 2 installed, the cost should instead be:
 
-  Vanilla:
+  Vanilla (reference):
     Storage tank       ( 25k):   20 iron plates (small)
+
+  Krastorio 2 (reference):
+    Big storage tank   ( 50k):   88 iron plates (large)
+    Huge storage tank  (200k):  224 iron plates (large)
 
   Zithorian:
     1x1 storage tank   (  3k):   ~5 iron plates (small)
