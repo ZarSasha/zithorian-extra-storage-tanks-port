@@ -52,7 +52,7 @@ With Krastorio 2 installed, the cost should instead be:
     5x5 storage tank   (150k): ~183 iron plates (large)
 
   Extra Storage Tanks:
-    Tiny storage tanks (2.7k): ~4.5 iron plates (small)
+    Tiny storage tanks (2.7k):   ~5 iron plates (small)
     Steel storage tank (125k): ~161 iron plates (large)
 
 I end up using values which are the same, or are very close to, the above.

@@ -88,7 +88,7 @@ local recipe_data = {
 if KRASTORIO_2.IsPresent then
     recipe_data.Ingredients = {
         {type = "item", name = "iron-plate",    amount =  6}, -- SUM: 12 iron plates (scaling 1)
-        {type = "item", name = "kr-iron-beam",  amount =  3}
+        {type = "item", name = "kr-iron-beam",  amount =  3}  -- Ratio: 2 plates to beams
         --
     }
 end
