@@ -258,9 +258,9 @@ special_functions.create_item = function(EntityName, Info)
         icon_size = 64, icon_mipmaps = 4, -- remove mipmaps
         subgroup = "storage",
         order = "b[fluild]-a[storage-tanks]-[zith]",
-        inventory_move_sound = item_sounds["metal-"..SoundSizeCat.."-inventory_move"],
-        pick_sound = item_sounds["metal-"..SoundSizeCat.."-inventory_pickup"],
-        drop_sound = item_sounds["metal-"..SoundSizeCat.."-inventory_move"],
+        inventory_move_sound = item_sounds["metal_"..SoundSizeCat.."_inventory_move"],
+        pick_sound = item_sounds["metal_"..SoundSizeCat.."_inventory_pickup"],
+        drop_sound = item_sounds["metal_"..SoundSizeCat.."_inventory_move"],
         place_result = EntityName,
         stack_size = StackSize,
         weight = Weight*kg
