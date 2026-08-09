@@ -197,8 +197,7 @@ special_functions.create_entity = function(EntityName, Info)
         fluid_box = {
             volume = settings.startup[EntityName.."-volume-setting"].value,
             pipe_covers = pipecoverspictures(),
-            pipe_connections = Info.PipeConnections,
-            hide_connection_Info = true
+            pipe_connections = Info.PipeConnections
         },
         window_bounding_box = Info.WindowBox,
         pictures = {
