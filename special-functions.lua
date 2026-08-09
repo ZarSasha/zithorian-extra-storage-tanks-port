@@ -251,13 +251,16 @@ special_functions.create_item = function(EntityName, Info)
     local SoundSizeCat = Info.SoundSizeCat -- string: "small" or "large"
     local StackSize    = Info.StackSize    -- number
     local Weight       = Info.Weight       -- number
-    local move = {
-        ["small"] = item_sounds.metal_small_inventory_move,
-        ["large"] = item_sounds.metal_large_inventory_move,
-    }
-    local pickup = {
-        ["small"] = item_sounds.metal_small_inventory_pickup,
-        ["large"] = item_sounds.metal_large_inventory_pickup,
+    -- Dictionary:
+    local sound_sizes = {
+        ["small"] = {
+            item_sounds.metal_small_inventory_move,
+            item_sounds.metal_small_inventory_pickup
+        },
+        ["large"] = {
+            item_sounds.metal_large_inventory_move,
+            item_sounds.metal_large_inventory_pickup
+        }
     }
     return {
         type = "item",
@@ -266,9 +269,9 @@ special_functions.create_item = function(EntityName, Info)
         icon_size = 64, icon_mipmaps = 4, -- remove mipmaps
         subgroup = "storage",
         order = "b[fluild]-a[storage-tanks]-[zith]",
-        inventory_move_sound = move[SoundSizeCat],
-        pick_sound = pickup[SoundSizeCat],
-        drop_sound = move[SoundSizeCat],
+        inventory_move_sound = sound_sizes[SoundSizeCat][1],
+        pick_sound = sound_sizes[SoundSizeCat][2],
+        drop_sound = sound_sizes[SoundSizeCat][1],
         place_result = EntityName,
         stack_size = StackSize,
         weight = Weight*kg
