@@ -13,6 +13,7 @@ Date: 2026-08-09
       Steel Storage Tank).
   Info:
     - Updated mod title and description.
+    - Updated license document.
     - Added migration script warning about the recipe changes.
   Bugfixes:
     - Fixed sound effects for item interactions. The smallets storage tank sounds like pipes, while
