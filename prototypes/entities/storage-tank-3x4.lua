@@ -81,8 +81,8 @@ local item_data = {
 local recipe_data = {
     EnergyNeed      = 5.0,
     Ingredients     = {
-        {type = "item", name = "iron-plate",    amount = 21}, -- SUM: 96 iron plates
-        {type = "item", name = "steel-plate",   amount = 15}  -- Ratio: 1.4 iron to steel
+        {type = "item", name = "iron-plate",    amount = 25}, -- SUM: 95 iron plates
+        {type = "item", name = "steel-plate",   amount = 14}  -- Ratio: 1.79 iron to steel
     }
 }
 if KRASTORIO_2.IsPresent then
