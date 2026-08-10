@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-NOTES ON SCALING OF RECIPE COST (last modified 2026-08-09)
+NOTES ON SCALING OF RECIPE COST (last modified 2026-08-10)
 ---------------------------------------------------------------------------------------------------
 Recipe cost has been harmonized among several mods that I maintain, which are:
 
