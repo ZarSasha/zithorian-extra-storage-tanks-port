@@ -3,9 +3,9 @@ NOTES ON SCALING OF RECIPE COST (last modified 2026-08-10)
 ---------------------------------------------------------------------------------------------------
 Recipe cost has been harmonized among several mods that I maintain, which are:
 
-  Zithorian's Extra Storage Tanks For 2.0+ (v1.3.1+)
-  Extra Storage Tanks: Tiny Storage Tanks  (v1.5.2+)
-  Extra Storage Tanks: Steel Storage Tank  (v1.3.1+)
+  Zithorian's Extra Storage Tanks For 2.0+ (v1.3.0+)
+  Extra Storage Tanks: Tiny Storage Tanks  (v1.5.1+)
+  Extra Storage Tanks: Steel Storage Tank  (v1.3.0+)
 
 It has also been adapted to match the storage tanks in Krastorio 2, if that mod is installed.
 
