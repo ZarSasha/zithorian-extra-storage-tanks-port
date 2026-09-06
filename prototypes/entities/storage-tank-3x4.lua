@@ -43,7 +43,7 @@ local entity_data = {
         EntityShift  = {0, 0},
         ShadowWidth  = 640,
         ShadowHeight = 640,
-        ShadowShift  = {0, 0}
+        ShadowShift  = {-1, 0}
     }),
     WindowIsTall        = true,
     WindowBox           = {{(-10/64), (-84/64)}, {(10/64), (46/64)}},
