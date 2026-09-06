@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.3.2
+Date: 2026-09-07
+  Graphics:
+    - 3x4 Storage tank: Fixed misaligned shadow.
+---------------------------------------------------------------------------------------------------
 Version: 1.3.1
 Date: 2026-08-10
   Balancing:
@@ -178,6 +183,3 @@ Date: 2024-11-18
     - Added nil-check for Fluid Handling technology before adding recipe unlocks.
 
     - Tidied up.
-
-
-
