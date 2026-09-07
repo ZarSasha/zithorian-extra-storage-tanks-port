@@ -22,6 +22,7 @@ local entity_data = {
     TileHeight          = 3, -- declares that height is only 3 tiles, for correct grid placement
     DrawBoxVertExt      = 2.15,
     IconDrawSpec        = {scale = 1.5, shift = {0, -0.75}},
+    Volume              = disabled and  72000 or math.max(SETTING.VOLUME[variant], 100),
     PipeConnections     = {
         { direction = defines.direction.north, position = {-1,-2} },
         { direction = defines.direction.north, position = { 1,-2} }

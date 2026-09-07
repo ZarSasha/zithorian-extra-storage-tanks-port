@@ -195,7 +195,7 @@ special_functions.create_entity = function(EntityName, Info)
         drawing_box_vertical_extension = Info.DrawBoxVertExt,
         icon_draw_specification = Info.IconDrawSpec,
         fluid_box = {
-            volume = settings.startup[EntityName.."-volume-setting"].value,
+            volume = Info.Volume,
             pipe_covers = pipecoverspictures(),
             pipe_connections = Info.PipeConnections
         },

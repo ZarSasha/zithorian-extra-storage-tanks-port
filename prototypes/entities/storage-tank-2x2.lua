@@ -22,6 +22,7 @@ local entity_data = {
     --TileHeight        = nil
     DrawBoxVertExt      = 0.15,
     IconDrawSpec        = {scale = 1, shift = {0,-0.25}},
+    Volume              = disabled and  12000 or math.max(SETTING.VOLUME[variant], 100),
     PipeConnections     = {
         { direction = defines.direction.north, position = { 0.5,-0.5} },
 
