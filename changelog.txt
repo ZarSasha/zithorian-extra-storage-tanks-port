@@ -3,8 +3,8 @@ Version: 1.4.0
 Date: 2026-09-07
   Minor Features:
     - Created a new option to disable any unwanted storage tanks, technically by hiding them and
-      preventing them from being unlocked. Just write 0 as capacity in the startup settings to do
-      this.
+      preventing them from being unlocked, to prevent potential issues with dependent mods. Just
+      write 0 as capacity in the startup settings to do this.
   Info:
     - Added descriptions to startup settings, informing about the new option above.
   Locale:
