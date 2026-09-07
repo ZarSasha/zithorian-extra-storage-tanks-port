@@ -5,10 +5,12 @@ Date: 2026-09-07
     - Created a new option to disable any unwanted storage tanks. Just write 0 as capacity in the
       startup settings to do this. NB: Existing storage tanks won't be removed from the world. The
       entity, item and recipe are merely hidden, to prevent potential issues with dependent mods.
+      Any values greater than 0 and lower than 100 will be increased to 100, while a value of 0
+      will be increased to the default value.
   Info:
-    - Added descriptions to startup settings, informing about the new option above.
+    - Added descriptions to startup settings, informing the player of the new option above.
   Locale:
-    - TODO: Update locales.
+    - Updated Chinese and Russian translations using DeepL.
   Internal:
     - Tidied up a bit.
 ---------------------------------------------------------------------------------------------------
