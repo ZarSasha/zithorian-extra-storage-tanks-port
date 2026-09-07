@@ -3,12 +3,13 @@
 --  ┃┃┣┫┃┃ ┃ ┃┃ ┃ ┗┫┃┃┣ ┗┓
 --  ┣┛┛┗┗┛ ┻ ┗┛ ┻ ┗┛┣┛┗┛┗┛
 ---------------------------------------------------------------------------------------------------
-require "shared"
 local spfunc = require "special-functions"
 ---------------------------------------------------------------------------------------------------
 -- STORAGE TANK 3X4 --
 ---------------------------------------------------------------------------------------------------
-local entity_name = STORAGE_TANK_NAME["3x4"]
+local variant = "3x4"
+local entity_name = STORAGE_TANK_NAME[variant]
+local disabled = not SETTING.ENABLED[variant]
 ---------------------------------------------------------------------------------------------------
     -- ENTITY PROTOTYPE
 ---------------------------------------------------------------------------------------------------
@@ -53,7 +54,8 @@ local entity_data = {
     FluidFlowScale      = 1.0,
     SoundSizeCategory   = "large",
     SoundVolume         = 0.6,
-    HeatingEnergy       = "180kW" -- On Aquilo
+    HeatingEnergy       = "180kW",  -- On Aquilo
+    Hidden              = disabled
 }
 
 ---------------------------------------------------------------------------------------------------
@@ -76,16 +78,18 @@ local remnants_data = { -- used by entity
 local item_data = {
     SoundSizeCat    = "large",
     StackSize       = 20,
-    Weight          = 50
+    Weight          = 50,
+    Hidden          = disabled
 }
 local recipe_data = {
     EnergyNeed      = 5.0,
     Ingredients     = {
         {type = "item", name = "iron-plate",    amount = 25}, -- SUM: 95 iron plates
         {type = "item", name = "steel-plate",   amount = 14}  -- Ratio: 1.79 iron to steel
-    }
+    },
+    Hidden          = disabled
 }
-if KRASTORIO_2.IsPresent then
+if KRASTORIO_2 then
     recipe_data.Ingredients = {
         {type = "item", name = "steel-plate",   amount = 28}, -- SUM: 112 iron plates (scaling 2)
         {type = "item", name = "kr-steel-beam", amount = 12}, -- Ratio: 2.33 plates to beams

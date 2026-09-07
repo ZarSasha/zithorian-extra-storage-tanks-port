@@ -235,11 +235,12 @@ special_functions.create_entity = function(EntityName, Info)
         },
         circuit_connector = Info.WireConnections,
         circuit_wire_max_distance = default_circuit_wire_max_distance,
+        hidden = Info.Hidden
     }
     -- COMPATIBILITY for Space Age DLC: Adds heating requirement on Aquilo.
-    if SPACE_AGE.IsPresent then entity.heating_energy = Info.HeatingEnergy end
+    if SPACE_AGE then entity.heating_energy = Info.HeatingEnergy end
     -- Space Exploration: Allows entity to be build in space.
-    if SPACE_EXPLORATION.IsPresent then entity.se_allow_in_space = true end
+    if SPACE_EXPLORATION then entity.se_allow_in_space = true end
 
     return entity
 end
@@ -251,6 +252,7 @@ special_functions.create_item = function(EntityName, Info)
     local SoundSizeCat = Info.SoundSizeCat -- string: "small" or "large"
     local StackSize    = Info.StackSize    -- number
     local Weight       = Info.Weight       -- number
+    local Hidden       = Info.Hidden
     -- Dictionary:
     local sound_sizes = {
         ["small"] = {
@@ -275,7 +277,8 @@ special_functions.create_item = function(EntityName, Info)
         drop_sound = sound_sizes[SoundSizeCat][1],
         place_result = EntityName,
         stack_size = StackSize,
-        weight = Weight*kg
+        weight = Weight * kg,
+        hidden = Hidden
     }
 end
 
@@ -285,6 +288,7 @@ end
 special_functions.create_recipe = function(EntityName, Info)
     local EnergyNeed  = Info.EnergyNeed  -- number
     local Ingredients = Info.Ingredients -- table of tables
+    local Hidden      = Info.Hidden
     -- Main table:
     return {
         type = "recipe",
@@ -294,7 +298,8 @@ special_functions.create_recipe = function(EntityName, Info)
         ingredients = Ingredients,
         results = {
             {type = "item", name = EntityName,    amount = 1}
-        }
+        },
+        hidden = Hidden
     }
 end
 

@@ -21,7 +21,7 @@ for variant, volume in pairs({
         name = variant.."-volume-setting",
         setting_type = "startup",
         default_value = volume,
-        minimum_value = 100
+        minimum_value = 0
     })
 end
 
