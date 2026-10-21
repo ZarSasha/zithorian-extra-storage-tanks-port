@@ -3,12 +3,13 @@
 --  ┃┃┣┫┃┃ ┃ ┃┃ ┃ ┗┫┃┃┣ ┗┓
 --  ┣┛┛┗┗┛ ┻ ┗┛ ┻ ┗┛┣┛┗┛┗┛
 ---------------------------------------------------------------------------------------------------
-require "shared"
 local spfunc = require "special-functions"
 ---------------------------------------------------------------------------------------------------
 -- STORAGE TANK 2X2 --
 ---------------------------------------------------------------------------------------------------
-local entity_name = STORAGE_TANK_NAME["2x2"]
+local variant = "2x2"
+local entity_name = STORAGE_TANK_NAME[variant]
+local disabled = not SETTING.ENABLED[variant]
 ---------------------------------------------------------------------------------------------------
     -- ENTITY PROTOTYPE
 ---------------------------------------------------------------------------------------------------
@@ -21,6 +22,7 @@ local entity_data = {
     --TileHeight        = nil
     DrawBoxVertExt      = 0.15,
     IconDrawSpec        = {scale = 1, shift = {0,-0.25}},
+    Volume              = disabled and  12000 or math.max(SETTING.VOLUME[variant], 100),
     PipeConnections     = {
         { direction = defines.direction.north, position = { 0.5,-0.5} },
 
@@ -53,7 +55,8 @@ local entity_data = {
     FluidFlowScale      = 1.0,
     SoundSizeCategory   = "large",
     SoundVolume         = 0.5,
-    HeatingEnergy       = "55kW" -- On Aquilo
+    HeatingEnergy       = "55kW",  -- On Aquilo
+    Hidden              = disabled
 }
 
 ---------------------------------------------------------------------------------------------------
@@ -76,16 +79,18 @@ local remnants_data = { -- used by entity
 local item_data = {
     SoundSizeCat    = "large",
     StackSize       = 50,
-    Weight          = 20
+    Weight          = 20,
+    Hidden          = disabled
 }
 local recipe_data = {
     EnergyNeed      = 2.0,
     Ingredients     = {
         {type = "item", name = "iron-plate",    amount = 12}, -- SUM: 27 iron plates
         {type = "item", name = "steel-plate",   amount =  3}  -- Ratio: 4 iron to steel
-    }
+    },
+    Hidden          = disabled
 }
-if KRASTORIO_2.IsPresent then
+if KRASTORIO_2 then
     recipe_data.Ingredients = {
         {type = "item", name = "iron-plate",    amount =  6}, -- SUM: 12 iron plates (scaling 1)
         {type = "item", name = "kr-iron-beam",  amount =  3}  -- Ratio: 2 plates to beams

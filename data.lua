@@ -1,8 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 --  ┳┓┏┓┏┳┓┏┓
 --  ┃┃┣┫ ┃ ┣┫  -- FIRST PROTOTYPE STAGE
---  ┻┛┛┗ ┻ ┛┗                                           
+--  ┻┛┛┗ ┻ ┛┗
 ---------------------------------------------------------------------------------------------------
+require "shared"
 require "prototypes.entities.storage-tank-1x1"
 require "prototypes.entities.storage-tank-2x2"
 require "prototypes.entities.storage-tank-3x4"

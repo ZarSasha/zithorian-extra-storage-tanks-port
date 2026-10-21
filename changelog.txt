@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.3.3
+Date: 2026-10-21
+  Minor Features:
+    - Created a new option to disable any unwanted storage tanks. Just write 0 as capacity in the
+      startup settings to do this. NB: Existing storage tanks won't be removed from the world. The
+      entity, item and recipe are merely hidden, to prevent potential issues with dependent mods.
+      Any values greater than 0 and lower than 100 will be increased to 100, while a value of 0
+      will be increased to the default value.
+  Info:
+    - Added descriptions to startup settings, informing the player of the new option above.
+  Locale:
+    - Updated Chinese and Russian translations using DeepL.
+  Internal:
+    - Tidied up a bit.
+---------------------------------------------------------------------------------------------------
 Version: 1.3.2
 Date: 2026-09-07
   Graphics:
